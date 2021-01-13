@@ -6,4 +6,7 @@ package com.hust.dces;
  * @Description:
  */
 public class hello {
+    public static void main(String[] args){
+        System.out.print("the bin");
+    }
 }

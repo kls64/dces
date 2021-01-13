@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dces.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dces.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/hello.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +12,20 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,7 +67,20 @@
       <recent name="C:\Users\kls\Desktop\工程实训\dces\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.hello">
+    <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hust.dces.hello" />
+      <module name="dces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hust.dces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DcesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="dces" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hust.dces.DcesApplication" />
@@ -61,6 +88,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.hello" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -85,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610434487162</updated>
       <workItem from="1610434491360" duration="910000" />
-      <workItem from="1610507714164" duration="238000" />
+      <workItem from="1610507714164" duration="727000" />
     </task>
     <task id="LOCAL-00001" summary="UserController">
       <created>1610435141246</created>
@@ -108,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610507877831</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="helloworld">
+      <created>1610508042997</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610508042997</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,10 +159,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="helloworld" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1610507876808">
+    <state x="644" y="316" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1610508406075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1610507876808" />
+    <state x="644" y="316" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1610508406075" />
+    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1610508492763">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1610508492763" />
     <state x="644" y="306" width="272" height="211" key="Github.ShareDialog" timestamp="1610434860786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -132,6 +175,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="116" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610434870208" />
+    <state x="279" y="0" key="SettingsEditor" timestamp="1610508471088">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="279" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610508471088" />
+    <state x="391" y="160" key="Vcs.Push.Dialog.v2" timestamp="1610508050166">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="391" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610508050166" />
     <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1610507309549">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
