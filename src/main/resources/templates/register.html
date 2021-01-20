@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 
     <meta charset="utf-8">
@@ -33,24 +32,24 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">创建账户</h1>
                             </div>
-                            <form class="user">
+                            <form class="form-horizontal" action="/user/register" method="post">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        <input type="text" name="username" class="form-control form-control-user" id="exampleFirstName"
                                             placeholder="输入用户名">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="number" class="form-control form-control-user" id="examplePhoneNumber"
+                                        <input type="number" name="phone" class="form-control form-control-user" id="examplePhoneNumber"
                                             placeholder="输入电话号码">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="邮箱地址">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="password" name="password" class="form-control form-control-user"
                                             id="exampleInputPassword" placeholder="密码">
                                     </div>
                                     <div class="col-sm-6">
@@ -58,9 +57,9 @@
                                             id="exampleRepeatPassword" placeholder="重输密码">
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
                                     注册
-                                </a>
+                                </button>
                             </form>
                             <hr>
                             <div class="text-center">

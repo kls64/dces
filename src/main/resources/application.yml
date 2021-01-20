@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/student?serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/dces?serverTimezone=GMT%2B8
     username: root
-    password: 123456
+    password: weizhenkun
   mvc:
     date-format: yyyy-MM-dd
   thymeleaf:

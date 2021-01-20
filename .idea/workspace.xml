@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Entity/Usertype.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Servicempl/UserServicempl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/analyze.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/analyze.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/appeal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/appeal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/indexadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/indexadmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/personalinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/personalinfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ssemanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ssemanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sseresolv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sseresolv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/submitfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/submitfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +37,31 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dces: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dces: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,13 +78,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1mxTxCv7KUfRviLLaSQwqHxt9p7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -79,7 +96,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/hust/dces/Entity" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -173,7 +190,12 @@
       <workItem from="1611046208711" duration="2633000" />
       <workItem from="1611057889359" duration="1839000" />
       <workItem from="1611059771579" duration="2285000" />
-      <workItem from="1611062100462" duration="1019000" />
+      <workItem from="1611062100462" duration="1147000" />
+      <workItem from="1611111773955" duration="4859000" />
+      <workItem from="1611128993464" duration="3396000" />
+      <workItem from="1611132518416" duration="1362000" />
+      <workItem from="1611133908554" duration="737000" />
+      <workItem from="1611134713381" duration="1535000" />
     </task>
     <task id="LOCAL-00001" summary="UserController">
       <created>1610435141246</created>
@@ -217,17 +239,26 @@
       <option name="project" value="LOCAL" />
       <updated>1611047569186</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="已实现各个页面的正常运行和跳转">
+      <created>1611063172443</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611063172443</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="UserController" />
     <MESSAGE value="helloworld" />
     <MESSAGE value="上传前端以及初步开始" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传前端以及初步开始" />
+    <MESSAGE value="已实现各个页面的正常运行和跳转" />
+    <option name="LAST_COMMIT_MESSAGE" value="已实现各个页面的正常运行和跳转" />
   </component>
   <component name="WindowStateProjectService">
     <state x="389" y="83" key="#Project_Structure" timestamp="1611026092199">
@@ -238,6 +269,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="373" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611040078770" />
+    <state x="793" y="158" key="#com.intellij.ide.util.MemberChooser" timestamp="1611113670420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="793" y="158" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1611113670420" />
     <state x="644" y="316" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1610508406075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -250,14 +285,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="923" y="338" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1611041099525" />
-    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1611047556085">
+    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1611063168348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1611047556085" />
-    <state x="578" y="181" key="FileChooserDialogImpl" timestamp="1610518223855">
+    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1611063168348" />
+    <state width="407" height="466" key="DebuggerActiveHint" timestamp="1611135211012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="181" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610518223855" />
+    <state width="407" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1611135211012" />
+    <state x="578" y="181" key="FileChooserDialogImpl" timestamp="1611112146772">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="181" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611112146772" />
     <state x="644" y="306" width="272" height="211" key="Github.ShareDialog" timestamp="1610434860786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -266,57 +305,88 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="116" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610434870208" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1611063077972">
+    <state width="1493" height="188" key="GridCell.Tab.0.bottom" timestamp="1611136223113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611063077972" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1611063077972">
+    <state width="1493" height="188" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611136223113" />
+    <state width="1493" height="188" key="GridCell.Tab.0.center" timestamp="1611136223113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611063077972" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1611063077972">
+    <state width="1493" height="188" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611136223113" />
+    <state width="1493" height="188" key="GridCell.Tab.0.left" timestamp="1611136223113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611063077972" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1611063077972">
+    <state width="1493" height="188" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611136223113" />
+    <state width="1493" height="188" key="GridCell.Tab.0.right" timestamp="1611136223113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611063077972" />
-    <state width="1493" height="210" key="GridCell.Tab.1.bottom" timestamp="1611063077972">
+    <state width="1493" height="188" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611136223113" />
+    <state width="1493" height="188" key="GridCell.Tab.1.bottom" timestamp="1611136223113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611063077972" />
-    <state width="1493" height="210" key="GridCell.Tab.1.center" timestamp="1611063077972">
+    <state width="1493" height="188" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611136223113" />
+    <state width="1493" height="188" key="GridCell.Tab.1.center" timestamp="1611136223113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1611063077972" />
-    <state width="1493" height="210" key="GridCell.Tab.1.left" timestamp="1611063077972">
+    <state width="1493" height="188" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1611136223113" />
+    <state width="1493" height="188" key="GridCell.Tab.1.left" timestamp="1611136223113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1611063077972" />
-    <state width="1493" height="210" key="GridCell.Tab.1.right" timestamp="1611063077972">
+    <state width="1493" height="188" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1611136223113" />
+    <state width="1493" height="188" key="GridCell.Tab.1.right" timestamp="1611136223113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1611063077972" />
+    <state width="1493" height="188" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1611136223113" />
+    <state width="1493" height="272" key="GridCell.Tab.2.bottom" timestamp="1611135563004">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611135563004" />
+    <state width="1493" height="272" key="GridCell.Tab.2.center" timestamp="1611135563004">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1611135563004" />
+    <state width="1493" height="272" key="GridCell.Tab.2.left" timestamp="1611135563004">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1611135563004" />
+    <state width="1493" height="272" key="GridCell.Tab.2.right" timestamp="1611135563004">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1611135563004" />
     <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1611040114196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1611040114196" />
+    <state x="519" y="104" key="Maven.ArtifactSearchDialog" timestamp="1611114126217">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="519" y="104" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1611114126217" />
     <state x="279" y="0" key="SettingsEditor" timestamp="1610508471088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610508471088" />
-    <state x="391" y="160" key="Vcs.Push.Dialog.v2" timestamp="1611047577857">
+    <state x="391" y="160" key="Vcs.Push.Dialog.v2" timestamp="1611063176998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611047577857" />
-    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1611059782701">
+    <state x="391" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611063176998" />
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1611133926987">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1611059782701" />
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1611133926987" />
     <state x="337" y="46" key="new project wizard" timestamp="1611041628995">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="337" y="46" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1611041628995" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/UserController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

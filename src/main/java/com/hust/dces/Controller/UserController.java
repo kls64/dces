@@ -1,12 +1,19 @@
 package com.hust.dces.Controller;
 
+import com.hust.dces.Entity.User;
+import com.hust.dces.Service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("user")
 public class UserController {
+
+    @Autowired
+    private UserService userService;
 
     // http://localhost:8080/user/login
     @GetMapping("/login")
@@ -20,6 +27,12 @@ public class UserController {
     public String userregister(){
 
         return "register";  // register.html
+    }
+
+    @PostMapping("/register")
+    public String addUserInfo(User user){
+        userService.addUserInfo(user);
+        return "redirect:/user/login";
     }
 
     @GetMapping("/forgot-password")
