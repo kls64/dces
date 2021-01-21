@@ -1,4 +1,4 @@
-package com.hust.dces.Servicempl;
+package com.hust.dces.ServiceImpl;
 
 import com.hust.dces.Entity.User;
 import com.hust.dces.Mapper.UserMapper;
@@ -15,5 +15,10 @@ public class UserServicempl implements UserService {
     @Override
     public Integer addUserInfo(User user) {
         return userMapper.addUserInfo(user);
+    }
+
+    @Override
+    public User loginuser(String username, String password) {
+        return userMapper.loginuser(username, password);
     }
 }

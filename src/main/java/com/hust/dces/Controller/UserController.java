@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("user")
@@ -21,6 +24,22 @@ public class UserController {
 
         return "login";   // login.html
 
+    }
+
+    @PostMapping("/login")
+    public String login(HttpServletRequest request, ModelAndView mv, User u){
+        String username=request.getParameter("username");
+        String password=request.getParameter("password");
+        u = userService.loginuser(username, password);
+        if(u != null ){
+            if (u.getTypeid() == 2){
+                return "redirect:/user/index";
+            }
+            else {
+                return "redirect:/user/indexadmin";
+            }
+        }
+        return "redirect:/user/loginfailed";
     }
 
     @GetMapping("/register")
@@ -79,6 +98,12 @@ public class UserController {
     public String userupdate(){
 
         return "update"; // update.html
+    }
+
+    @GetMapping("/loginfailed")
+    public String userlf(){
+
+        return "loginfailed"; // loginfailed.html
     }
 
 
