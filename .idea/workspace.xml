@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spbt" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -202,7 +201,7 @@
       <workItem from="1611134713381" duration="1535000" />
       <workItem from="1611219975609" duration="303000" />
       <workItem from="1611221735572" duration="60000" />
-      <workItem from="1611221817664" duration="27000" />
+      <workItem from="1611221817664" duration="69000" />
     </task>
     <task id="LOCAL-00001" summary="UserController">
       <created>1610435141246</created>
@@ -260,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611220241993</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="已实现注册和登录">
+      <created>1611221863849</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611221863849</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,18 +306,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="923" y="338" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1611041099525" />
-    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1611220239040">
+    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1611221862454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1611220239040" />
+    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1611221862454" />
     <state width="407" height="466" key="DebuggerActiveHint" timestamp="1611135211012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="407" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1611135211012" />
-    <state x="578" y="181" key="FileChooserDialogImpl" timestamp="1611217179821">
+    <state x="578" y="181" key="FileChooserDialogImpl" timestamp="1611222080771">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="181" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611217179821" />
+    <state x="578" y="181" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611222080771" />
     <state x="644" y="306" width="272" height="211" key="Github.ShareDialog" timestamp="1610434860786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -380,14 +386,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610508471088" />
-    <state x="391" y="160" key="Vcs.Push.Dialog.v2" timestamp="1611220245274">
+    <state x="391" y="160" key="Vcs.Push.Dialog.v2" timestamp="1611221866077">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611220245274" />
-    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1611221822574">
+    <state x="391" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611221866077" />
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1611222049440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1611221822574" />
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1611222049440" />
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611215546543">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
