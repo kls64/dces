@@ -1,6 +1,7 @@
 package com.hust.dces.Controller;
 
 import com.hust.dces.Entity.Document;
+import com.hust.dces.Entity.User;
 import com.hust.dces.Service.DocumentService;
 import com.hust.dces.Utils.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -21,7 +23,7 @@ public class DocumentController {
     @Autowired
     private DocumentService documentService;
     @PostMapping("/analyze")
-    public String fileAnalyze(Document document, @RequestParam("myFile") MultipartFile file){//提交文件保存到后台并分析
+    public String fileAnalyze(HttpServletRequest request, Document document, @RequestParam("myFile") MultipartFile file){//提交文件保存到后台并分析
         //1.保存文件到硬盘上 利用工具类
         String fileName= file.getOriginalFilename();
         String filePath= FileUtil.getUpLoadFilePath();
@@ -39,8 +41,8 @@ public class DocumentController {
         Date date=new Date();//获取一个java.util包下的Date对象
         Timestamp time=new Timestamp(date.getTime());//然后将时间转换成数据库类型的datetime类型
         document.setUploadtime(time);
-        document.setUserid(1);
-        //document.setUserid(user.getUserid());
+        User user= (User) request.getSession().getAttribute("currentUser");
+        document.setUserid(user.getUserid());
         documentService.addDoc(document);
         return "analyze"; // analyze.html
     }

@@ -7,4 +7,6 @@ public interface UserService {
     Integer addUserInfo(User user);
 
     User loginuser(String username, String password);
+
+
 }

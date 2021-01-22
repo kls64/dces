@@ -1,15 +1,19 @@
 package com.hust.dces.Controller;
 
+import com.hust.dces.Entity.Document;
 import com.hust.dces.Entity.User;
+import com.hust.dces.Service.DocumentService;
 import com.hust.dces.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping("user")
@@ -17,6 +21,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private DocumentService documentService;
 
     // http://localhost:8080/user/login
     @GetMapping("/login")
@@ -27,15 +34,21 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String login(HttpServletRequest request, ModelAndView mv, User u){
+    public String login(HttpServletRequest request, Model model, User u){
         String username=request.getParameter("username");
         String password=request.getParameter("password");
         u = userService.loginuser(username, password);
         if(u != null ){
             if (u.getTypeid() == 2){
+//                model.addAttribute("user",u);
+                HttpSession session = request.getSession();
+                session.setAttribute("currentUser", u);//应该把登录信息储存在内置对象session中以便多次访问
                 return "redirect:/user/index";
             }
             else {
+//                model.addAttribute("user",u);
+                HttpSession session = request.getSession();
+                session.setAttribute("currentUser", u);//应该把登录信息储存在内置对象session中以便多次访问
                 return "redirect:/user/indexadmin";
             }
         }
@@ -62,8 +75,11 @@ public class UserController {
     }
 
     @GetMapping("/index")
-    public String userindex(){
-
+    public String userindex(HttpServletRequest request,Model model){
+        User user = (User) request.getSession().getAttribute("currentUser");
+        Integer userId = user.getUserid();
+        List<Document> documents = documentService.findDocumentByUserId(userId);
+        model.addAttribute("documents",documents);
         return "index"; // index.html
     }
 
