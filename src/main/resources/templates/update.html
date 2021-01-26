@@ -33,24 +33,25 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">修改个人信息</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" action="/user/update" method="post">
+                                <input type="hidden" th:value="${user.userid}" name="userid">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        <input type="text" th:value="${user.username}" name="username" class="form-control form-control-user" id="exampleFirstName"
                                             placeholder="设置用户名">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="number" class="form-control form-control-user" id="examplePhoneNumber"
+                                        <input type="number" th:value="${user.phone}" name="phone" class="form-control form-control-user" id="examplePhoneNumber"
                                             placeholder="设置电话号码">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    <input type="email" th:value="${user.email}" name="email" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="设置邮箱地址">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="password" th:value="${user.password}" name="password" class="form-control form-control-user"
                                             id="exampleInputPassword" placeholder="重设密码">
                                     </div>
                                     <div class="col-sm-6">
@@ -58,9 +59,9 @@
                                             id="exampleRepeatPassword" placeholder="重输密码">
                                     </div>
                                 </div>
-                                <a href="/user/login" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
                                     修改
-                                </a>
+                                </button>
                             </form>
                         </div>
                     </div>

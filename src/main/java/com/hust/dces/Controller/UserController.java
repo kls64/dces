@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -91,8 +92,11 @@ public class UserController {
 
 
     @GetMapping("/personalinfo")
-    public String userinfo(){
-
+    public String userinfo(HttpServletRequest request, Model model){
+        User user = (User) request.getSession().getAttribute("currentUser");
+        Integer userID = user.getUserid();
+        List<User> userList = userService.checkUserByUserID(userID);
+        model.addAttribute("userList",userList);
         return "personalinfo"; // personalinfo.html
     }
 
@@ -110,10 +114,17 @@ public class UserController {
 
 
 
-    @GetMapping("/update")
-    public String userupdate(){
-
+    @GetMapping("/update/{id}")
+    public String userupdate(@PathVariable("id") Integer userid, Model model){
+        User user = userService.findUserByUserID(userid);
+        model.addAttribute("user",user);
         return "update"; // update.html
+    }
+
+    @PostMapping("/update")
+    public String userupdate(User user){
+        userService.updateUserByID(user);
+        return "redirect:/user/login";
     }
 
     @GetMapping("/loginfailed")

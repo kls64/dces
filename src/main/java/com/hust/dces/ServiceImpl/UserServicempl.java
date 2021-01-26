@@ -6,6 +6,8 @@ import com.hust.dces.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServicempl implements UserService {
 
@@ -20,5 +22,21 @@ public class UserServicempl implements UserService {
     @Override
     public User loginuser(String username, String password) {
         return userMapper.loginuser(username, password);
+    }
+
+    @Override
+    public List<User> checkUserByUserID(Integer userID) {
+        return userMapper.checkUserByUserID(userID);
+    }
+
+    @Override
+    public User findUserByUserID(Integer userID) {
+        return userMapper.findUserByUserID(userID);
+    }
+
+
+    @Override
+    public Integer updateUserByID(User user) {
+        return userMapper.updateUserByID(user);
     }
 }
