@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -22,7 +23,8 @@ public class DocumentController {
 
     @Autowired
     private DocumentService documentService;
-    @PostMapping("/analyze")
+
+    @PostMapping("/analyze") // 这里可以写@PostMapping("/submitfile")?
     public String fileAnalyze(HttpServletRequest request, Document document, @RequestParam("myFile") MultipartFile file){//提交文件保存到后台并分析
         //1.保存文件到硬盘上 利用工具类
         String fileName= file.getOriginalFilename();
@@ -44,13 +46,11 @@ public class DocumentController {
         User user= (User) request.getSession().getAttribute("currentUser");
         document.setUserid(user.getUserid());
         documentService.addDoc(document);
+        // 这里将上传的文档信息保留在session中，便于后续操作
+        HttpSession session = request.getSession();
+        session.setAttribute("currentDocument",document);
+        // 这里docid传不进session中
         return "analyze"; // analyze.html
-    }
-
-    @GetMapping("/appeal")
-    public String userappeal(){
-
-        return "appeal"; // appeal.html
     }
 
     @GetMapping("/submitfile")

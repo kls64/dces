@@ -14,4 +14,5 @@ public interface DocumentMapper {
 
     @Select("select * from document where userid =#{userid}")
     List<Document> findDocumentByUserId( Integer userId);
+
 }

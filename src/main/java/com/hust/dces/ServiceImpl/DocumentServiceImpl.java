@@ -22,4 +22,5 @@ public class DocumentServiceImpl implements DocumentService {
     public List<Document> findDocumentByUserId(Integer userId) {
         return documentMapper.findDocumentByUserId(userId);
     }
+
 }

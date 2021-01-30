@@ -134,6 +134,8 @@
                 </nav>
                 <!-- End of Topbar -->
 
+                <form class="form-horizontal" action="/apl/appeal" method="Post" enctype="multipart/form-data">
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -149,12 +151,12 @@
                             请输入申诉理由
                         </div>
                         <div class="card-body">
-                            <textarea class="form-control" rows="5"></textarea>
+                            <textarea name="reason" class="form-control" rows="5"></textarea>
                         </div>
                     </div>
-                    <a href="/user/index" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary">
                         提交
-                    </a>
+                    </button>
 
                 </div>
                 <!-- End of Content Wrapper -->
