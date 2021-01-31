@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Utils/EmailRegisterValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Utils/EmailRegisterValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +227,7 @@
       <workItem from="1611975711262" duration="5070000" />
       <workItem from="1611990672251" duration="11871000" />
       <workItem from="1612061243536" duration="22762000" />
-      <workItem from="1612094067130" duration="1766000" />
+      <workItem from="1612094067130" duration="2008000" />
     </task>
     <task id="LOCAL-00001" summary="UserController">
       <created>1610435141246</created>
@@ -307,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612093651915</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1.登陆界面实现保存密码功能，将用户名和密码保存到客户端cookie，下次登录可以记住用户名和密码直接登录；&#10;2.在登录界面将普通用户登录和管理员登录操作分开，用户即使输入正确的用户名和密码但用户类型选择不对依然登录失败；&#10;3.登录失败之后不再重定向到一个新界面，由后端返回一个带参数的url,前端js判别给出提示；&#10;4.在注册上使用js在前端判别输入的手机号和密码以及确认密码的合规性，之后再post到后端注册&#10;5.给邮箱发验证码的注册的功能尚在开发中">
+      <created>1612095878586</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1612095878586</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +335,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="COLUMN_WIDTH">
+                <map>
+                  <entry key="2" value="47" />
+                  <entry key="3" value="47" />
+                </map>
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -382,10 +394,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="923" y="338" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1611041099525" />
-    <state x="331" y="0" key="CommitChangelistDialog2" timestamp="1612093650836">
+    <state x="331" y="0" key="CommitChangelistDialog2" timestamp="1612095877716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="331" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1612093650836" />
+    <state x="331" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1612095877716" />
     <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1611632232339" />
     <state width="444" height="466" key="DebuggerActiveHint" timestamp="1611991751829">
       <screen x="0" y="0" width="1536" height="824" />
@@ -403,25 +415,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="116" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610434870208" />
-    <state width="1323" height="138" key="GridCell.Tab.0.bottom" timestamp="1612095169789">
+    <state width="815" height="326" key="GridCell.Tab.0.bottom" timestamp="1612095948332">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612095169789" />
+    <state width="815" height="326" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612095948332" />
     <state width="1493" height="252" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612006754512" />
-    <state width="1323" height="138" key="GridCell.Tab.0.center" timestamp="1612095169789">
+    <state width="815" height="326" key="GridCell.Tab.0.center" timestamp="1612095948331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612095169789" />
+    <state width="815" height="326" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612095948331" />
     <state width="1493" height="252" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612006754511" />
-    <state width="1323" height="138" key="GridCell.Tab.0.left" timestamp="1612095169788">
+    <state width="815" height="326" key="GridCell.Tab.0.left" timestamp="1612095948331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612095169788" />
+    <state width="815" height="326" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612095948331" />
     <state width="1493" height="252" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612006754511" />
-    <state width="1323" height="138" key="GridCell.Tab.0.right" timestamp="1612095169789">
+    <state width="815" height="326" key="GridCell.Tab.0.right" timestamp="1612095948332">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612095169789" />
+    <state width="815" height="326" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612095948332" />
     <state width="1493" height="252" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612006754511" />
     <state width="1323" height="398" key="GridCell.Tab.1.bottom" timestamp="1612093794694">
       <screen x="0" y="0" width="1366" height="728" />
