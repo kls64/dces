@@ -9,17 +9,17 @@ import javax.servlet.http.HttpSession;
 /*
  * 保存和获取当前用户的工具类
  */
-public class userContext {
+public class UserContext {
     private static final String CURRENT_USER_IN_SESSION = "user";
 
     // 得到session
-    private static HttpSession getSession(){
+    private static HttpSession getSession() {
 
         return ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getSession();
     }
 
     // 设置当前用户到session中
-    public static void putCurrentUser(User currentUser){
+    public static void putCurrentUser(User currentUser) {
         getSession().setAttribute(CURRENT_USER_IN_SESSION, currentUser);
     }
 

@@ -35,29 +35,30 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String login(HttpServletRequest request, Model model, User u){
-        String username=request.getParameter("username");
-        String password=request.getParameter("password");
-        u = userService.loginuser(username, password);
-        if(u != null ){
-            if (u.getTypeid() == 2){
+    public String login(HttpServletRequest request, Model model, User frontUser) {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        User dbUser = userService.loginuser(username, password);
+        // 首先判断数据库中有此用户，接着判断数据库查询到的用户类型与前端提交过来的类型是否一致
+        if (null != dbUser && dbUser.getTypeid() == frontUser.getTypeid()) {
+            if (dbUser.getTypeid() == 1) {
 //                model.addAttribute("user",u);
                 HttpSession session = request.getSession();
-                session.setAttribute("currentUser", u);//应该把登录信息储存在内置对象session中以便多次访问
+                // 注意此处放的 dbUser 是包含数据库的 userid 的；下同
+                session.setAttribute("currentUser", dbUser); //应该把登录信息储存在内置对象session中以便多次访问
                 return "redirect:/user/index";
-            }
-            else {
+            } else {
 //                model.addAttribute("user",u);
                 HttpSession session = request.getSession();
-                session.setAttribute("currentUser", u);//应该把登录信息储存在内置对象session中以便多次访问
+                session.setAttribute("currentUser", dbUser); //应该把登录信息储存在内置对象session中以便多次访问
                 return "redirect:/user/indexadmin";
             }
         }
-        return "redirect:/user/loginfailed";
+        return "redirect:/user/login?LoginFailed=yes";
     }
 
     @GetMapping("/register")
-    public String userregister(){
+    public String userRegister() {
 
         return "register";  // register.html
     }
@@ -111,8 +112,6 @@ public class UserController {
 
         return "ssemanage"; // ssemanage.html
     }
-
-
 
     @GetMapping("/update/{id}")
     public String userupdate(@PathVariable("id") Integer userid, Model model){

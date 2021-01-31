@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    @Insert("insert into user (username,password,email,phone) values(#{username},#{password},#{email},#{phone});")
+    @Insert("insert into user (username,password,email,phone,typeid) values(#{username},#{password},#{email},#{phone},#{typeid});")
     Integer addUserInfo(User user);
 
     @Select("select * from user where username=#{username} and password=#{password}")

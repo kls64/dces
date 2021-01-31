@@ -20,71 +20,98 @@
 
 <body class="bg-gradient-primary">
 
-    <div class="container">
+<div class="container">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">创建账户</h1>
-                            </div>
-                            <form class="user" action="/user/register" method="post">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" name="username" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="输入用户名">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="number" name="phone" class="form-control form-control-user" id="examplePhoneNumber"
-                                            placeholder="输入电话号码">
-                                    </div>
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">创建账户</h1>
+                        </div>
+                        <form id="register" class="user" action="/user/register" method="post">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" name="username" class="form-control form-control-user"
+                                           id="userName"
+                                           placeholder="用户名">
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="邮箱地址">
+                                <div class="col-sm-6">
+                                    <input type="tel" name="phone" class="form-control form-control-user"
+                                           id="phoneNumber"
+                                           placeholder="电话号码">
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" name="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="密码">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="重输密码">
-                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control form-control-user"
+                                       id="email"
+                                       placeholder="邮箱地址">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="password" name="password" class="form-control form-control-user"
+                                           id="password" placeholder="密码">
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    注册
-                                </button>
-                            </form>
-                            <hr>
-                            <div class="text-center">
-                                <a class="small" href="forgot-password">忘记密码?</a>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control form-control-user"
+                                           id="confirmPassword" placeholder="确认密码">
+                                </div>
                             </div>
-                            <div class="text-center">
-                                <a class="small" href="login">已有密码? 登录!</a>
-                            </div>
+                            <input type="hidden" name="typeid" value="1">
+                            <button type="button" onclick="checkRegisterInfo()"
+                                    class="btn btn-primary btn-user btn-block">
+                                注册
+                            </button>
+                        </form>
+                        <hr>
+                        <div class="text-center">
+                            <a class="small" href="forgot-password">忘记密码?</a>
+                        </div>
+                        <div class="text-center">
+                            <a class="small" href="login">已有账户? 立即登录</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="/js/sb-admin-2.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/js/sb-admin-2.min.js"></script>
+
+<script language="JavaScript" type="text/javascript">
+    function checkRegisterInfo()  // 检查用户填写的注册信息
+    {
+        // 检查输入的电话号码必须为11位
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        if (phoneNumber.length != 11) {
+            alert("电话号码必须为11位!");
+            return false;
+        }
+        // 检查密码和确认密码必须相同
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+        if (password != confirmPassword) {
+            alert("确认密码和密码不一致!");
+            return false;
+        }
+        var form_register = document.getElementById('register');
+        form_register.submit(); // 检查通过后再提交表单
+        return true;
+    }
+</script>
 
 </body>
 

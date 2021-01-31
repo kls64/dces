@@ -18,77 +18,179 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-primary" onLoad="bodyLoad()">
 
-    <div class="container">
+<div class="container">
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-12 col-md-9">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">登录用户</h1>
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">用户登录</h1>
+                                </div>
+                                <form id="login" class="user" action="/user/login" method="post">
+                                    <div class="form-group">
+                                        <input type="text" name="username" class="form-control form-control-user"
+                                               id="username" placeholder="输入用户名">
                                     </div>
-                                    <form class="user" action="/user/login" method="post">
-                                        <div class="form-group">
-                                            <input type="text" name="username" class="form-control form-control-user"
-                                                id="exampleInputEmail" placeholder="输入用户名">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="密码">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">记住密码
-                                                    </label>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            用户登录
-                                        </button>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            管理员登录
-                                        </button>
-                                       
-                                    </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="/user/forgot-password">忘记密码?</a>
+                                    <div class="form-group">
+                                        <input type="password" name="password" class="form-control form-control-user"
+                                               id="password" placeholder="密码">
                                     </div>
-                                    <div class="text-center">
-                                        <a class="small" href="/user/register">注册账户!</a>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input" id="rememberPassword">
+                                            <label class="custom-control-label" for="rememberPassword">记住密码
+                                            </label>
+                                        </div>
                                     </div>
+                                    <input id="usertype" type="hidden" name="typeid">
+                                    <button type="button" onclick="userLogin()"
+                                            class="btn btn-primary btn-user btn-block">
+                                        用户登录
+                                    </button>
+                                    <button type="button" onclick="adminLogin()"
+                                            class="btn btn-primary btn-user btn-block">
+                                        管理员登录
+                                    </button>
+                                </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="/user/forgot-password">忘记密码?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="/user/register">注册账户!</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
         </div>
 
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="/js/sb-admin-2.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/js/sb-admin-2.min.js"></script>
+
+<!-- Save username and password to client cookie -->
+<script language="JavaScript" type="text/javascript">
+
+    function userLogin() {
+        document.getElementById('usertype').value = "1";
+        checkUserInfo();
+        return true;
+    }
+
+    function adminLogin() {
+        document.getElementById('usertype').value = "2";
+        checkUserInfo();
+        return true;
+    }
+
+    function checkUserInfo()      //判断用户名和密码是否为空
+    {
+        if (document.getElementById('username').value == "") {
+            alert('请输入用户名！')
+            document.getElementById('username').focus();
+            return false;
+        }
+        if (document.getElementById('password').value == "") {
+            alert('请输入密码！')
+            document.getElementById('password').focus();
+            return false;
+        }
+        saveInfo();
+        var form_login = document.getElementById('login');
+        form_login.submit(); // 检查通过后再提交登录表单
+        return true;
+    }
+
+    function saveInfo() { // 判断用户名和密码不为空则保存到cookie中
+        try {
+            var isSave = document.getElementById('rememberPassword').checked;   //保存密码是否选中
+            if (isSave) {
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                if (username != "" && password != "") {
+                    SetCookie(username, password, 1); // 设置 cookie过期时间为 24 h
+                }
+            } else {
+                SetCookie("", "", -2);
+            }
+        } catch (e) {
+            e.toLocaleString()
+        }
+    }
+
+    function SetCookie(username, password, expireTime) { // expireTime 为天
+        var Then = new Date();
+        Then.setTime(Then.getTime() + expireTime * 24 * 60 * 60 * 1000); // 设置 cookie过期时间
+        document.cookie = "userinfo=" + username + "%%" + password + ";expires=" + Then.toGMTString();
+        $.cookie()
+    }
+
+    function GetCookie() {
+        var nmpsd;
+        var nm;
+        var psd;
+        var cookieString = new String(document.cookie);
+        var cookieHeader = "userinfo=";
+        var beginPosition = cookieString.indexOf(cookieHeader);
+        cookieString = cookieString.substring(beginPosition);
+        var ends = cookieString.indexOf(";");
+        if (ends != -1) {
+            cookieString = cookieString.substring(0, ends);
+        }
+        if (beginPosition > -1) {
+            nmpsd = cookieString.substring(cookieHeader.length);
+            if (nmpsd != "") {
+                beginPosition = nmpsd.indexOf("%%");
+                nm = nmpsd.substring(0, beginPosition);
+                psd = nmpsd.substring(beginPosition + 2);
+                document.getElementById('username').value = nm;
+                document.getElementById('password').value = psd;
+                if (nm != "" && psd != "") {
+                    // document.forms[0].checkbox.checked = true;
+                    document.getElementById('rememberPassword').checked = true;
+                }
+            }
+        }
+    }
+
+    // 加载此 HTML 的 body 部分时候执行代码
+    function bodyLoad() {
+        document.getElementById('username').focus();
+        GetCookie();
+        let query = window.location.search.substring(1); // 获取 url 中 ? 后面的参数部分
+        let vars = query.split("&");
+        for (let i = 0; i < vars.length; i++) {
+            let pair = vars[i].split("=");
+            if (pair[0] == "LoginFailed" && pair[1] == "yes") {
+                alert("登录失败！");
+            }
+        }
+    }
+
+</script>
 
 </body>
 
