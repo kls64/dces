@@ -80,7 +80,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/user/review">
+                <a class="nav-link" href="/apl/review">
                     <i class="fas fa-fw fa-table"></i>
                     <span>查看申诉</span>
                 </a>
@@ -143,23 +143,19 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>文档名</th>
-                                            <th>提交时间</th>
-                                            <th>申诉内容</th>
-                                            <th>处理结果</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>我和我的祖国</td>
-                                            <td>2021-1-9</td>
-                                            <td>我爱祖国</td>
-                                            <td>言之有理</td>
-                                        </tr>
-                                    </tbody>
+                                <table class="table">
+                                    <tr>
+                                        <th>提交文档</th>
+                                        <th>申诉时间</th>
+                                        <th>申诉理由</th>
+                                        <th>处理结果</th>
+                                    </tr>
+                                    <tr th:each="Appealdoc,userStat:${apllist}">
+                                        <td th:text="${Appealdoc.docname}"></td>
+                                        <td th:text="${#dates.format(Appealdoc.appealtime,'yyyy/MM/dd')}"></td>
+                                        <td th:text="${Appealdoc.reason}"></td>
+                                        <td th:text="${Appealdoc.status}==true?${Appealdoc.feedback}:'未处理'"></td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>

@@ -101,7 +101,7 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small" th:text="${session.currentUser.username}"></span>
                             <img class="img-profile rounded-circle" src="/img/undraw_profile.svg">
                         </a>
                         <!-- Dropdown - User Information -->
@@ -129,41 +129,26 @@
 
 
                     <!-- Content Row -->
-                    <div class="row">
-
-                        <div class="col-lg-6">
-                            <div class="card shadow mb-4">
-
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">用户申诉理由</h6>
-                                    </div>
-                                    <div class="card-body">
-                                       我觉得这段内容不合理,建议...
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="card shadow mb-4">
-
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">处理申诉结果并反馈</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <textarea class="form-control" rows="5"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>用户名</th>
+                                <th>提交文档</th>
+                                <th>申诉时间</th>
+                                <th>申诉理由</th>
+                                <th>处理状态</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr th:each="Appealdoc,userStat:${apls}">
+                                <td th:text="${Appealdoc.username}"></td>
+                                <td th:text="${Appealdoc.docname}"></td>
+                                <td th:text="${#dates.format(Appealdoc.appealtime,'yyyy/MM/dd')}"></td>
+                                <td th:text="${Appealdoc.reason}"></td>
+                                <td th:text="${Appealdoc.status}==true?'已处理':'未处理'"></td>
+                                <td> <a th:href="@{'appealresolv/'+${Appealdoc.appealid}}"> 处理 </a>  </td>
+                            </tr>
+                        </table>
                     </div>
-
-                    <a href="/user/indexadmin" class="btn btn-primary">
-                        提交
-                    </a>
-
 
                 </div>
                 <!-- End of Content Wrapper -->
