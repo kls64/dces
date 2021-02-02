@@ -13,13 +13,60 @@
 
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
+<!--    <link rel="stylesheet" href="/css/bootstrap.css">-->
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
+<script>
+    $(function() {
+
+        $("#addWord").click(function() {
+            $('#myModal').modal('show') //显示模态框
+        })
+    })
+</script>
 
 <body id="page-top">
+
+
+<!--添加关键词响应窗口-->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: transparent" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title" align="center">增添敏感词</h4>
+                <br/>
+                <form class="form-horizontal" role="form" action="/sens_word/add" method="post">
+                    <div class="form-group">
+                        <div class="col-sm-5">
+                            <input type="text"  align="center"  class="form-control"  name="word" id="word" placeholder="请输敏感词">
+                            <select style="width:200px"name="wordtypeid" class="form-control" id="wordtypeid">
+                                <option value="0">--所有--</option>
+                                <option th:each="SensitiveWordsType:${typeInfo}" th:value="${SensitiveWordsType.wordtypeid}" th:text="${SensitiveWordsType.wordtype}"  th:selected="${SensitiveWordsType.wordtypeid==wordTypeId}"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-5">
+                            <button id="submitBtn"  style="margin:auto" type="submit" class="btn btn-default btn-block btn-primary">添加</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -28,7 +75,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/user/index">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/user/indexadmin">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -58,7 +105,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="/user/ssemanage">
+                <a class="nav-link" href="/sens_word/guanggao">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>管理敏感词库</span>
                 </a>
@@ -123,9 +170,27 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">管理广告词库</h1>
-                    </div>
+                    <form class="form-inline" col-lg-8 method="post" action="/sens_word/guanggao">
+                        <div class="form-group">
+                            <label for="">类别：</label>
+
+                            <select style="width:200px"name="wordtypeid" class="form-control" id="xueli">
+                                <option value="0">--所有--</option>
+                                <option th:each="SensitiveWordsType:${typeInfo}" th:value="${SensitiveWordsType.wordtypeid}" th:text="${SensitiveWordsType.wordtype}"  th:selected="${SensitiveWordsType.wordtypeid==wordTypeId}"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">词语</label>
+                            <input type="text"  th:value="${sensitiveWord}" class="form-control" id="exampleInputEmail2" name="sensitiveword">
+                        </div>
+                        <button type="submit" class="btn btn-info">查询</button>
+                        <a href="#" class="btn btn-primary" id="addWord">添加</a>
+                    </form>
+
+
+
+
+
 
 
                     <!-- Content Row -->
@@ -137,31 +202,42 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
                                     <tbody>
-                                    <tr th:each="SensitiveWord,userStat:${sensitiveWords}">
+                                    <tr th:each="SensitiveWord,userStat:${sensitiveWords.list}">
                                             <td th:text="${SensitiveWord.sensitiveword}">
                                         </td>
                                       <td>
 <!--                                          <a href="/sens_word/guanggao" class="btn btn-primary">删除</a>-->
-                                            <a class="btn btn-primary" th:href="@{'/sens_word/guanggao/'+${SensitiveWord.itemid}}">删除</a>
+                                            <a class="btn btn-primary" th:href="@{'/sens_word/delete/'+${SensitiveWord.itemid}}">删除</a>
                                         </td>
                                     </tr>
                                     </tbody>
 
-<!--                                    <thead>-->
-<!--                                    <tr>-->
-<!--                                        <td>-->
-<!--                                            <div class="card-body">-->
-<!--                                            <a href="/sens_word/guanggao" class="btn btn-primary">-->
-<!--                                                广告-->
-<!--                                            </a>-->
-<!--                                        </div>-->
-<!--                                        </td>-->
-
-<!--                                    </tr>-->
-<!--                                    </thead>-->
 
 
                                 </table>
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a th:href="@{/sens_word/guanggao(pageIndex=${sensitiveWords.pageNum-1},pageSize=6)}" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <th:block th:each="nav:${sensitiveWords.navigatepageNums}">
+                                            <!--                    导航页号-->
+                                            <li th:class="${nav==sensitiveWords.pageNum}?'active':''">
+                                                <a th:href="@{/sens_word/guanggao(pageIndex=${nav},wordtypeid=${wordTypeId},sensitiveword=${sensitiveWord})}"
+                                                   th:text="${nav}"></a>
+                                            </li>
+                                        </th:block>
+                                        <li>
+                                        <a th:href="@{/sens_word/guanggao(pageIndex=${sensitiveWords.pageNum+1},pageSize=6,wordtypeid=${wordtypeid},sensitiveword=${sensitiveword})}" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+
                             </div>
                         </div>
                     </div>

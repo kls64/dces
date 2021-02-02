@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/appealresolv.html" afterDir="false" />
+    <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="用户查看文件/登录信息回显">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/SensitiveWordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Entity/SensitiveWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Mapper/SensitiveWordMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Service/SensitiveWordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/ServiceImpl/SensitiveWordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/guanggao.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/AppealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/AppealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Entity/Appealdoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Entity/Appealdoc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Mapper/AppealMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Mapper/AppealMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Service/AppealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Service/AppealService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/ServiceImpl/AppealServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/ServiceImpl/AppealServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/analyze.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/analyze.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/appeal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/appeal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dces.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dces.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/personalinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/personalinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sseresolv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sseresolv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/submitfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/submitfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ssemanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ssemanage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,49 +22,8 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="dces: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="dces: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="appealdoc: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="dces: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
-    <select />
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,19 +44,23 @@
         <option name="userSettingsFile" value="C:\maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1mxTxCv7KUfRviLLaSQwqHxt9p7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -111,77 +68,41 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spbt" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
   </component>
   <component name="RecentsManager">
-    <key name="DestinationChooserDialog.Package.RECENTS_KEY">
-      <recent name="com.hust.dces.Entity" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.hust.dces.ServiceImpl" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\dces\src\main\resources\static" />
-      <recent name="D:\dces\src\main\resources\templates" />
-      <recent name="D:\dces\src\main\resources\static\scss" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.hust.dces" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hust.dces.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\dces\src\main\resources\templates" />
-      <recent name="D:\dces\src\main\resources\static" />
-      <recent name="D:\dces\src\main\resources" />
-      <recent name="C:\Users\kls\Desktop\工程实训\dces\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.hust.dces" />
+      <recent name="C:\Users\kls\Desktop\工程实训\dces\src\main\resources\templates" />
+      <recent name="C:\Users\kls\Desktop\工程实训\dces\src\main\java\com\hust\dces\ServiceImpl" />
+      <recent name="C:\Users\kls\Desktop\工程实训\dces\src\main\java\com\hust\dces\Service" />
+      <recent name="C:\Users\kls\Desktop\工程实训\dces\src\main\java\com\hust\dces\mapper" />
+      <recent name="C:\Users\kls\Desktop\工程实训\dces\src\main\java\com\hust\dces\entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.dcesApplication">
-    <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hust.dces.hello" />
-      <module name="dces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hust.dces.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="DcesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="dces" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hust.dces.DcesApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="dcesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="dces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hust.dces.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hust.dces.dcesApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.dcesApplication" />
-        <item itemvalue="Application.hello" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -206,32 +127,22 @@
       <option name="presentableId" value="Default" />
       <updated>1610434487162</updated>
       <workItem from="1610434491360" duration="910000" />
-      <workItem from="1610507714164" duration="878000" />
-      <workItem from="1610518206328" duration="19000" />
-      <workItem from="1611025825578" duration="9007000" />
-      <workItem from="1611046208711" duration="2633000" />
-      <workItem from="1611057889359" duration="1839000" />
-      <workItem from="1611059771579" duration="2285000" />
-      <workItem from="1611062100462" duration="1147000" />
-      <workItem from="1611111773955" duration="4859000" />
-      <workItem from="1611128993464" duration="3396000" />
-      <workItem from="1611132518416" duration="1362000" />
-      <workItem from="1611133908554" duration="737000" />
-      <workItem from="1611134713381" duration="1535000" />
-      <workItem from="1611219975609" duration="303000" />
-      <workItem from="1611221735572" duration="60000" />
-      <workItem from="1611221817664" duration="69000" />
-      <workItem from="1611561409741" duration="14509000" />
-      <workItem from="1611627056742" duration="59000" />
-      <workItem from="1611627141907" duration="2511000" />
-      <workItem from="1611629703210" duration="2991000" />
-      <workItem from="1611888869408" duration="6316000" />
-      <workItem from="1611975711262" duration="5070000" />
-      <workItem from="1611990672251" duration="11871000" />
-      <workItem from="1612149682961" duration="14371000" />
-      <workItem from="1612189318943" duration="49000" />
-      <workItem from="1612189386454" duration="542000" />
-      <workItem from="1612234304214" duration="10141000" />
+      <workItem from="1610507309710" duration="925000" />
+      <workItem from="1611106796457" duration="1075000" />
+      <workItem from="1611129275559" duration="13403000" />
+      <workItem from="1611144999161" duration="1029000" />
+      <workItem from="1611275371142" duration="6565000" />
+      <workItem from="1611282653779" duration="6609000" />
+      <workItem from="1611536316533" duration="1305000" />
+      <workItem from="1611884587938" duration="1608000" />
+      <workItem from="1611972627134" duration="1680000" />
+      <workItem from="1611997482596" duration="2326000" />
+      <workItem from="1612058896083" duration="6647000" />
+      <workItem from="1612080202982" duration="4652000" />
+      <workItem from="1612085357792" duration="2103000" />
+      <workItem from="1612089184883" duration="2614000" />
+      <workItem from="1612093132381" duration="1839000" />
+      <workItem from="1612095271251" duration="838000" />
     </task>
     <task id="LOCAL-00001" summary="UserController">
       <created>1610435141246</created>
@@ -247,123 +158,83 @@
       <option name="project" value="LOCAL" />
       <updated>1610435283732</updated>
     </task>
-    <task id="LOCAL-00003" summary="helloworld">
-      <created>1610507877831</created>
+    <task id="LOCAL-00003" summary="UserController">
+      <created>1610507524265</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1610507877831</updated>
+      <updated>1610507524265</updated>
     </task>
-    <task id="LOCAL-00004" summary="helloworld">
-      <created>1610508042997</created>
+    <task id="LOCAL-00004" summary="UserController">
+      <created>1611107026922</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1610508042997</updated>
+      <updated>1611107026922</updated>
     </task>
-    <task id="LOCAL-00005" summary="helloworld">
-      <created>1610508555653</created>
+    <task id="LOCAL-00005" summary="将controller层分了一下,整合了注册功能,文档上传1.0">
+      <created>1611145641504</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1610508555653</updated>
+      <updated>1611145641504</updated>
     </task>
-    <task id="LOCAL-00006" summary="上传前端以及初步开始">
-      <created>1611047569186</created>
+    <task id="LOCAL-00006" summary="用户查看文件/登录信息回显">
+      <created>1611290776008</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1611047569186</updated>
+      <updated>1611290776008</updated>
     </task>
-    <task id="LOCAL-00007" summary="已实现各个页面的正常运行和跳转">
-      <created>1611063172443</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1611063172443</updated>
-    </task>
-    <task id="LOCAL-00008" summary="已实现注册和登录">
-      <created>1611220241993</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1611220241993</updated>
-    </task>
-    <task id="LOCAL-00009" summary="已实现注册和登录">
-      <created>1611221863849</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1611221863849</updated>
-    </task>
-    <task id="LOCAL-00010" summary="实现查看用户信息和修改，增加一个保存和获取当前用户工具类，用于以后代码改进">
-      <created>1611632235786</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1611632235786</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="UserController" />
-    <MESSAGE value="helloworld" />
-    <MESSAGE value="上传前端以及初步开始" />
-    <MESSAGE value="已实现各个页面的正常运行和跳转" />
-    <MESSAGE value="已实现注册和登录" />
-    <MESSAGE value="实现查看用户信息和修改，增加一个保存和获取当前用户工具类，用于以后代码改进" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现查看用户信息和修改，增加一个保存和获取当前用户工具类，用于以后代码改进" />
+    <MESSAGE value="将controller层分了一下,整合了注册功能,文档上传1.0" />
+    <MESSAGE value="用户查看文件/登录信息回显" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户查看文件/登录信息回显" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="389" y="83" key="#Project_Structure" timestamp="1611026092199">
+    <state x="361" y="71" key="#Notifications" timestamp="1611106998310">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="389" y="83" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1611026092199" />
-    <state x="499" y="168" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1611994261920">
+    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1611106998310" />
+    <state x="361" y="71" key="#Project_Structure" timestamp="1611107463303">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="168" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1611994261920" />
-    <state x="373" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611904585952">
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1611107463303" />
+    <state x="22" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611107668758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="373" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611904585952" />
-    <state x="793" y="158" key="#com.intellij.ide.util.MemberChooser" timestamp="1612253409846">
+    <state x="22" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611107668758" />
+    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1612094605581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="793" y="158" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612253409846" />
-    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1611904625472">
+    <state x="574" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612094605581" />
+    <state x="297" y="234" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1611107665420">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1611904625472" />
-    <state x="644" y="316" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1612147708619">
+    <state x="297" y="234" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1611107665420" />
+    <state x="614" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1611884653602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="644" y="316" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1612147708619" />
-    <state x="890" y="384" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1611041374656">
+    <state x="614" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1611884653602" />
+    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1612061815937">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="890" y="384" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1611041374656" />
-    <state x="923" y="338" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1611041099525">
+    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612061815937" />
+    <state x="23" y="49" width="1254" height="682" key="DiffContextDialog" timestamp="1611146028562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="923" y="338" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1611041099525" />
-    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1611632232339">
+    <state x="23" y="49" width="1254" height="682" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1611146028562" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1612091795134">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1611632232339" />
-    <state width="444" height="466" key="DebuggerActiveHint" timestamp="1612250198637">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="444" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1612250198637" />
-    <state x="715" y="308" key="FileChooserDialogImpl" timestamp="1612234328214">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="715" y="308" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612234328214" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612091795134" />
     <state x="644" y="306" width="272" height="211" key="Github.ShareDialog" timestamp="1610434860786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -372,92 +243,93 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="116" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610434870208" />
-    <state width="1493" height="193" key="GridCell.Tab.0.bottom" timestamp="1612255070952">
+    <state width="1493" height="121" key="GridCell.Tab.0.bottom" timestamp="1612095067316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612255070952" />
-    <state width="1493" height="193" key="GridCell.Tab.0.center" timestamp="1612255070952">
+    <state width="1493" height="121" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612095067316" />
+    <state width="1493" height="121" key="GridCell.Tab.0.center" timestamp="1612095067316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612255070952" />
-    <state width="1493" height="193" key="GridCell.Tab.0.left" timestamp="1612255070952">
+    <state width="1493" height="121" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612095067316" />
+    <state width="1493" height="121" key="GridCell.Tab.0.left" timestamp="1612095067316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612255070952" />
-    <state width="1493" height="193" key="GridCell.Tab.0.right" timestamp="1612255070952">
+    <state width="1493" height="121" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612095067316" />
+    <state width="1493" height="121" key="GridCell.Tab.0.right" timestamp="1612095067316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612255070952" />
-    <state width="1493" height="193" key="GridCell.Tab.1.bottom" timestamp="1612255070952">
+    <state width="1493" height="121" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612095067316" />
+    <state width="1493" height="121" key="GridCell.Tab.1.bottom" timestamp="1612095067316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612255070952" />
-    <state width="1493" height="193" key="GridCell.Tab.1.center" timestamp="1612255070952">
+    <state width="1493" height="121" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612095067316" />
+    <state width="1493" height="121" key="GridCell.Tab.1.center" timestamp="1612095067316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612255070952" />
-    <state width="1493" height="193" key="GridCell.Tab.1.left" timestamp="1612255070952">
+    <state width="1493" height="121" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612095067316" />
+    <state width="1493" height="121" key="GridCell.Tab.1.left" timestamp="1612095067316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612255070952" />
-    <state width="1493" height="193" key="GridCell.Tab.1.right" timestamp="1612255070952">
+    <state width="1493" height="121" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612095067316" />
+    <state width="1493" height="121" key="GridCell.Tab.1.right" timestamp="1612095067316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="193" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612255070952" />
-    <state width="1493" height="247" key="GridCell.Tab.2.bottom" timestamp="1612250264069">
+    <state width="1493" height="121" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612095067316" />
+    <state width="1493" height="514" key="GridCell.Tab.2.bottom" timestamp="1612089149898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="247" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612250264069" />
-    <state width="1493" height="247" key="GridCell.Tab.2.center" timestamp="1612250264069">
+    <state width="1493" height="514" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612089149898" />
+    <state width="1493" height="514" key="GridCell.Tab.2.center" timestamp="1612089149897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="247" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1612250264069" />
-    <state width="1493" height="247" key="GridCell.Tab.2.left" timestamp="1612250264069">
+    <state width="1493" height="514" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1612089149897" />
+    <state width="1493" height="514" key="GridCell.Tab.2.left" timestamp="1612089149897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="247" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1612250264069" />
-    <state width="1493" height="247" key="GridCell.Tab.2.right" timestamp="1612250264069">
+    <state width="1493" height="514" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1612089149897" />
+    <state width="1493" height="514" key="GridCell.Tab.2.right" timestamp="1612089149897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="247" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1612250264069" />
-    <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1611040114196">
+    <state width="1493" height="514" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1612089149897" />
+    <state x="294" y="71" key="MergeDialog" timestamp="1611275425899">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1611040114196" />
-    <state x="519" y="104" key="Maven.ArtifactSearchDialog" timestamp="1611114126217">
+    <state x="294" y="71" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1611275425899" />
+    <state x="477" y="128" width="914" height="567" key="MultipleFileMergeDialog" timestamp="1612096262288">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="519" y="104" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1611114126217" />
-    <state x="279" y="0" key="SettingsEditor" timestamp="1611990848925">
+    <state x="477" y="128" width="914" height="567" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1612096262288" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1611290781997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="279" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1611990848925" />
-    <state x="391" y="160" key="Vcs.Push.Dialog.v2" timestamp="1611632238882">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611290781997" />
+    <state x="565" y="190" key="chooseDestDirectoryDialog" timestamp="1611107843395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611632238882" />
-    <state x="394" y="218" key="com.intellij.ide.util.TipDialog" timestamp="1612234306046">
+    <state x="565" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1611107843395" />
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1612089186383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="394" y="218" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1612234306046" />
-    <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611215546543">
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1612089186383" />
+    <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612096252119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1611215546543" />
-    <state x="337" y="46" key="new project wizard" timestamp="1611041628995">
+    <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1612096252119" />
+    <state x="555" y="204" key="git4idea.merge.GitMergeDialog" timestamp="1611107244254">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="337" y="46" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1611041628995" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/AppealController.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="555" y="204" key="git4idea.merge.GitMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1611107244254" />
+    <state x="500" y="204" key="git4idea.merge.GitPullDialog" timestamp="1611106873977">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="500" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1611106873977" />
+    <state x="526" y="244" key="git4idea.ui.GitUnstashDialog" timestamp="1611107225763">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="526" y="244" key="git4idea.ui.GitUnstashDialog/0.0.1536.824@0.0.1536.824" timestamp="1611107225763" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1611143513177">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1611143513177" />
   </component>
 </project>
