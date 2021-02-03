@@ -186,6 +186,8 @@
             let pair = vars[i].split("=");
             if (pair[0] == "LoginFailed" && pair[1] == "yes") {
                 alert("登录失败！");
+            } else if (pair[0] == "RegisterSuccess" && pair[1] == "yes") {
+                alert("注册成功，请登录！");
             }
         }
     }

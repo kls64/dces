@@ -30,32 +30,38 @@ public class DocumentController {
         String fileName= file.getOriginalFilename();
         String filePath= FileUtil.getUpLoadFilePath();
         document.setDocname(fileName);
-        fileName = System.currentTimeMillis()+fileName;
+        fileName = System.currentTimeMillis() + fileName;
         try {
-            FileUtil.uploadFile(file.getBytes(),filePath,fileName);
-        }catch (Exception e){
+            FileUtil.uploadFile(file.getBytes(), filePath, fileName);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         //2.保存文件名称到数据里
         document.setDocpath(fileName);
         document.setDoctype("1");
         //暂时给一个虚假的类别
-        Date date=new Date();//获取一个java.util包下的Date对象
-        Timestamp time=new Timestamp(date.getTime());//然后将时间转换成数据库类型的datetime类型
+        Date date = new Date();//获取一个java.util包下的Date对象
+        Timestamp time = new Timestamp(date.getTime());//然后将时间转换成数据库类型的datetime类型
         document.setUploadtime(time);
-        User user= (User) request.getSession().getAttribute("currentUser");
+        User user = (User) request.getSession().getAttribute("currentUser");
         document.setUserid(user.getUserid());
         documentService.addDoc(document);
         // 这里将上传的文档信息保留在session中，便于后续操作
         HttpSession session = request.getSession();
-        session.setAttribute("currentDocument",document);
+        session.setAttribute("currentDocument", document);
         // 这里docid传不进session中
         return "analyze"; // analyze.html
     }
 
     @GetMapping("/submitfile")
-    public String usersf(){
+    public String userSubmitFile() {
 
         return "submitfile"; // submitfile.html
     }
+
+    @PostMapping("/deleteFile")
+    public String userDeleteFile() {
+        return "";
+    }
+
 }

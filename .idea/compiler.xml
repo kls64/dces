@@ -9,8 +9,8 @@
         <module name="dces" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="dces" target="1.8" />
+    <bytecodeTargetLevel target="11">
+      <module name="dces" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

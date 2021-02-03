@@ -4,6 +4,7 @@ import com.hust.dces.Entity.Document;
 import com.hust.dces.Entity.User;
 import com.hust.dces.Service.DocumentService;
 import com.hust.dces.Service.UserService;
+import com.hust.dces.Utils.EmailRegisterValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,9 +27,11 @@ public class UserController {
     @Autowired
     private DocumentService documentService;
 
+    EmailRegisterValidator erv = null;
+
     // http://localhost:8080/user/login
     @GetMapping("/login")
-    public String userlogin(){
+    public String userlogin() {
 
         return "login";   // login.html
 
@@ -63,10 +66,34 @@ public class UserController {
         return "register";  // register.html
     }
 
+    // 用户发送验证码
+    @PostMapping("/getVC")
+    public String getVerificationCode(HttpServletRequest request) // 必须得有返回值
+    {
+        String userEmail = request.getParameter("userEmail");
+        erv = new EmailRegisterValidator(6, 60);
+        try {
+            System.out.println(userEmail);
+            erv.sendVerificationCodeToEmail(userEmail);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+        return "register";
+    }
+
     @PostMapping("/register")
-    public String addUserInfo(User user){
-        userService.addUserInfo(user);
-        return "redirect:/user/login";
+    public String addUserInfo(HttpServletRequest request, User user) {
+        String userVC = request.getParameter("userVerifyCode");
+        if (erv.isCorrectAndNotExpired(userVC)) // 验证码正确且成功
+        {
+            userService.addUserInfo(user);
+            return "redirect:/user/login?RegisterSuccess=yes";
+        } else // 验证码错误或过期
+        {
+            erv = null;
+            return "redirect:/user/register?VCError=yes";
+        }
+
     }
 
     @GetMapping("/forgot-password")
@@ -81,7 +108,7 @@ public class UserController {
         User user = (User) request.getSession().getAttribute("currentUser");
         Integer userId = user.getUserid();
         List<Document> documents = documentService.findDocumentByUserId(userId);
-        model.addAttribute("documents",documents);
+        model.addAttribute("documents", documents);
         return "index"; // index.html
     }
 

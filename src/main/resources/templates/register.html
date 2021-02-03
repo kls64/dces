@@ -60,8 +60,19 @@
                                            id="confirmPassword" placeholder="确认密码">
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <div class="col-sm-8 mb-3 mb-sm-0">
+                                    <input type="text" name="userVerifyCode" class="form-control form-control-user"
+                                           id="verificationCode" placeholder="6位数字验证码">
+                                </div>
+                                <div class="col-sm-4">
+                                    <button type="button" id="getVerifyCode" class="btn btn-primary btn-user btn-block">
+                                        获取邮箱验证码
+                                    </button>
+                                </div>
+                            </div>
                             <input type="hidden" name="typeid" value="1">
-                            <button type="button" onclick="checkRegisterInfo()"
+                            <button type="button" onclick="submitRegisterForm()"
                                     class="btn btn-primary btn-user btn-block">
                                 注册
                             </button>
@@ -92,6 +103,13 @@
 <script src="/js/sb-admin-2.min.js"></script>
 
 <script language="JavaScript" type="text/javascript">
+
+    function submitRegisterForm() {
+        checkRegisterInfo();
+        var form_register = document.getElementById('register');
+        form_register.submit(); // 检查通过后再提交表单
+    }
+
     function checkRegisterInfo()  // 检查用户填写的注册信息
     {
         // 检查输入的电话号码必须为11位
@@ -107,10 +125,46 @@
             alert("确认密码和密码不一致!");
             return false;
         }
-        var form_register = document.getElementById('register');
-        form_register.submit(); // 检查通过后再提交表单
         return true;
     }
+
+    // 验证码
+    var button = document.getElementById('getVerifyCode');
+    button.onclick = function () {
+        checkRegisterInfo(); // 先检查用户填写的注册信息
+        var that = $(this)
+        var timeo = 60;
+        var timeStop = setInterval(function () {
+            timeo--;
+            if (timeo > 0) {
+                that.text('重新发送' + timeo + 's');
+                that.attr('disabled', 'disabled');//禁止点击
+            } else {
+                timeo = 60;//当减到0时赋值为60
+                that.text('获取邮箱验证码');
+                clearInterval(timeStop);//清除定时器
+                that.removeAttr('disabled');//移除属性，可点击
+            }
+        }, 1000)
+        getVerificationCode(); // 将获取验证码请求发送到后端
+    }
+
+    function getVerificationCode(info) {
+        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('POST', '/user/getVC', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+        httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        var userEmail = document.getElementById('email').value;
+        httpRequest.send("userEmail=" + userEmail);//第三步：发送请求  将请求参数写在URL中
+        /**
+         * 获取数据后的处理程序
+         */
+        // httpRequest.onreadystatechange = function () {
+        //     if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+        //         alert("验证码已发送到邮箱!");
+        //     }
+        // };
+    }
+
 </script>
 
 </body>
