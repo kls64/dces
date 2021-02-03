@@ -128,12 +128,6 @@ public class UserController {
         return "personalinfo"; // personalinfo.html
     }
 
-    @GetMapping("/review")
-    public String userreview(){
-
-        return "review"; // review.html
-    }
-
     @GetMapping("/ssemanage")
     public String adminsmanage(){
 
