@@ -26,4 +26,11 @@ public interface UserMapper {
 
     @Update("update user set username=#{username},password=#{password},email=#{email},phone=#{phone} where userid=#{userid};")
     Integer updateUserByID(User user);
+
+    @Select("select count(*) from document where userid = #{userID}")
+    Integer getFileCountByUserID(Integer userID);
+
+    @Select("select count(*) from appealdoc where userid = #{userID}")
+    Integer getAppealCountByUserID(Integer userID);
+
 }

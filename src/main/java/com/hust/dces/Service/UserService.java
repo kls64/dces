@@ -16,5 +16,8 @@ public interface UserService {
 
     Integer updateUserByID(User user);
 
+    Integer getFileCountByUserID(Integer userID);
+
+    Integer getAppealCountByUserID(Integer userID);
 
 }

@@ -50,9 +50,9 @@ public class SensitiveWordController {
 
     @PostMapping("/add")
     public String addWord(@RequestParam(value = "word") String word,
-                          @RequestParam(value = "wordtypeid") Integer wordtypeid,Model model){
-        if(word!=null)
-        sensitiveWordService.addWord(word,wordtypeid);
+                          @RequestParam(value = "wordtypeid") Integer wordtypeid, Model model) {
+        if (word != null)
+            sensitiveWordService.addWord(word, wordtypeid);
         return "redirect:/sens_word/guanggao";
     }
 

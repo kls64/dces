@@ -13,6 +13,7 @@ public final class EmailRegisterValidator {
     // 保存邮箱验证码
     private byte[] verificationCode = null;
     private String vcString = null;
+
     // 设置验证码过期时间
     private static long expireTime; // 60s
     private long vcTime; // 生成验证码的时间戳
@@ -126,14 +127,17 @@ public final class EmailRegisterValidator {
 
 
 //    public static void main(String args[]) {
-//        System.out.println("this is main.");
-//        EmailRegisterValidator erv = new EmailRegisterValidator(6, 60);
-///*        for (int i = 0; i < 1000; ++i) {
-//            erv.generateVerificationCode();
-//            System.out.println(Arrays.toString(verificationCode));
-//        }*/
-//        erv.sendVerificationCodeToEmail("1370905044@qq.com");
-//
+////        System.out.println("this is main.");
+////        EmailRegisterValidator erv = new EmailRegisterValidator(6, 60);
+/////*        for (int i = 0; i < 1000; ++i) {
+////            erv.generateVerificationCode();
+////            System.out.println(Arrays.toString(verificationCode));
+////        }*/
+////        erv.sendVerificationCodeToEmail("1370905044@qq.com");
+//        System.out.println(File.pathSeparator); // 这是 ;
+//        System.out.println(File.separator); // 这是 \
+//        Integer a = new Integer(67);
+//        System.out.println(a);
 //    }
 
 }

@@ -13,16 +13,15 @@
 
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<!--    <link rel="stylesheet" href="/css/bootstrap.css">-->
+    <!--    <link rel="stylesheet" href="/css/bootstrap.css">-->
     <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 <script>
-    $(function() {
-
-        $("#addWord").click(function() {
+    $(function () {
+        $("#addWord").click(function () {
             $('#myModal').modal('show') //显示模态框
         })
     })
@@ -34,9 +33,10 @@
 <!--添加关键词响应窗口-->
 <div class="modal fade" id="myModal">
     <div class="modal-dialog">
-        <div class="modal-content" style="background-color: transparent" >
+        <div class="modal-content" style="background-color: transparent">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 <h4 class="modal-title" align="center">增添敏感词</h4>
@@ -44,16 +44,23 @@
                 <form class="form-horizontal" role="form" action="/sens_word/add" method="post">
                     <div class="form-group">
                         <div class="col-sm-5">
-                            <input type="text"  align="center"  class="form-control"  name="word" id="word" placeholder="请输敏感词">
-                            <select style="width:200px"name="wordtypeid" class="form-control" id="wordtypeid">
+                            <input type="text" align="center" class="form-control" name="word" id="word"
+                                   placeholder="请输敏感词">
+                            <select style="width:200px" name="wordtypeid" class="form-control" id="wordtypeid">
                                 <option value="0">--所有--</option>
-                                <option th:each="SensitiveWordsType:${typeInfo}" th:value="${SensitiveWordsType.wordtypeid}" th:text="${SensitiveWordsType.wordtype}"  th:selected="${SensitiveWordsType.wordtypeid==wordTypeId}"></option>
+                                <option th:each="SensitiveWordsType:${typeInfo}"
+                                        th:value="${SensitiveWordsType.wordtypeid}"
+                                        th:text="${SensitiveWordsType.wordtype}"
+                                        th:selected="${SensitiveWordsType.wordtypeid==wordTypeId}"></option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-sm-5">
-                            <button id="submitBtn"  style="margin:auto" type="submit" class="btn btn-default btn-block btn-primary">添加</button>
+                            <button id="submitBtn" style="margin:auto" type="submit"
+                                    class="btn btn-default btn-block btn-primary">
+                                添加
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -67,225 +74,230 @@
 </div><!-- /.modal -->
 
 
+<!-- Page Wrapper -->
+<div id="wrapper">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/user/indexadmin">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-laugh-wink"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">
+                管理员界面
+            </div>
+        </a>
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/user/indexadmin">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">管理员界面
-                    <sup>1</sup>
-                </div>
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/user/indexadmin">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>主页</span>
             </a>
+        </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+        <!-- Divider -->
+        <hr class="sidebar-divider">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="/user/indexadmin">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>主页</span>
-                </a>
-            </li>
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Addons
+        </div>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="/sens_word/guanggao">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>管理敏感词库</span>
+            </a>
+        </li>
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="/apl/sseresolv">
+                <i class="fas fa-fw fa-table"></i>
+                <span>处理用户申诉</span>
+            </a>
+        </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="/sens_word/guanggao">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>管理敏感词库</span>
-                </a>
-            </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="/apl/sseresolv">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>处理用户申诉</span>
-                </a>
-            </li>
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+    </ul>
+    <!-- End of Sidebar -->
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
 
-        </ul>
-        <!-- End of Sidebar -->
+        <!-- Main Content -->
+        <div id="content">
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-            <!-- Main Content -->
-            <div id="content">
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Nav Item - User Information -->
-                    <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small" th:text="${session.currentUser.username}"></span>
-                            <img class="img-profile rounded-circle" src="/img/undraw_profile.svg">
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+                              th:text="${session.currentUser.username}"></span>
+                        <img class="img-profile rounded-circle" src="/img/undraw_profile.svg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                         aria-labelledby="userDropdown">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            退出登录
                         </a>
-                        <!-- Dropdown - User Information -->
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                退出登录
-                            </a>
-                        </div>
-                    </li>
+                    </div>
+                </li>
 
-                    </ul>
+                </ul>
 
-                </nav>
-                <!-- End of Topbar -->
+            </nav>
+            <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <form class="form-inline" col-lg-8 method="post" action="/sens_word/guanggao">
-                        <div class="form-group">
-                            <label for="">类别：</label>
+                <!-- Page Heading -->
+                <form class="form-inline" col-lg-8 method="post" action="/sens_word/guanggao">
+                    <div class="form-group">
+                        <label for="">类别：</label>
+                        <select style="width:200px" name="wordtypeid" class="form-control" id="xueli">
+                            <option value="0">--所有--</option>
+                            <option th:each="SensitiveWordsType:${typeInfo}" th:value="${SensitiveWordsType.wordtypeid}"
+                                    th:text="${SensitiveWordsType.wordtype}"
+                                    th:selected="${SensitiveWordsType.wordtypeid==wordTypeId}">
 
-                            <select style="width:200px"name="wordtypeid" class="form-control" id="xueli">
-                                <option value="0">--所有--</option>
-                                <option th:each="SensitiveWordsType:${typeInfo}" th:value="${SensitiveWordsType.wordtypeid}" th:text="${SensitiveWordsType.wordtype}"  th:selected="${SensitiveWordsType.wordtypeid==wordTypeId}"></option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail2">词语</label>
-                            <input type="text"  th:value="${sensitiveWord}" class="form-control" id="exampleInputEmail2" name="sensitiveword">
-                        </div>
-                        <button type="submit" class="btn btn-info">查询</button>
-                        <a href="#" class="btn btn-primary" id="addWord">添加</a>
-                    </form>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail2">词语</label>
+                        <input type="text" th:value="${sensitiveWord}" class="form-control" id="exampleInputEmail2"
+                               name="sensitiveword">
+                    </div>
+                    <button type="submit" class="btn btn-info">查询</button>
+                    <a href="#" class="btn btn-primary" id="addWord">添加</a>
+                </form>
 
 
+                <!-- Content Row -->
+                <div class="card shadow mb-4">
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                                <tbody>
+                                <tr th:each="SensitiveWord,userStat:${sensitiveWords.list}">
+                                    <td th:text="${SensitiveWord.sensitiveword}">
+                                    </td>
+                                    <td>
+                                        <!--                                          <a href="/sens_word/guanggao" class="btn btn-primary">删除</a>-->
+                                        <a class="btn btn-primary"
+                                           th:href="@{'/sens_word/delete/'+${SensitiveWord.itemid}}">删除</a>
+                                    </td>
+                                </tr>
+                                </tbody>
 
 
-
-
-
-                    <!-- Content Row -->
-                    <div class="card shadow mb-4">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-
-                                    <tbody>
-                                    <tr th:each="SensitiveWord,userStat:${sensitiveWords.list}">
-                                            <td th:text="${SensitiveWord.sensitiveword}">
-                                        </td>
-                                      <td>
-<!--                                          <a href="/sens_word/guanggao" class="btn btn-primary">删除</a>-->
-                                            <a class="btn btn-primary" th:href="@{'/sens_word/delete/'+${SensitiveWord.itemid}}">删除</a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-
-
-
-                                </table>
-                                <nav aria-label="Page navigation">
-                                    <ul class="pagination">
-                                        <li>
-                                            <a th:href="@{/sens_word/guanggao(pageIndex=${sensitiveWords.pageNum-1},pageSize=6)}" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
+                            </table>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li>
+                                        <a th:href="@{/sens_word/guanggao(pageIndex=${sensitiveWords.pageNum-1},pageSize=6)}"
+                                           aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <th:block th:each="nav:${sensitiveWords.navigatepageNums}">
+                                        <!--导航页号-->
+                                        <li th:class="${nav==sensitiveWords.pageNum}?'active':''">
+                                            <a th:href="@{/sens_word/guanggao(pageIndex=${nav},wordtypeid=${wordTypeId},sensitiveword=${sensitiveWord})}"
+                                               th:text="${nav}"></a>
                                         </li>
-                                        <th:block th:each="nav:${sensitiveWords.navigatepageNums}">
-                                            <!--                    导航页号-->
-                                            <li th:class="${nav==sensitiveWords.pageNum}?'active':''">
-                                                <a th:href="@{/sens_word/guanggao(pageIndex=${nav},wordtypeid=${wordTypeId},sensitiveword=${sensitiveWord})}"
-                                                   th:text="${nav}"></a>
-                                            </li>
-                                        </th:block>
-                                        <li>
-                                        <a th:href="@{/sens_word/guanggao(pageIndex=${sensitiveWords.pageNum+1},pageSize=6,wordtypeid=${wordtypeid},sensitiveword=${sensitiveword})}" aria-label="Next">
+                                    </th:block>
+                                    <li>
+                                        <a th:href="@{/sens_word/guanggao(pageIndex=${sensitiveWords.pageNum+1},pageSize=6,wordtypeid=${wordtypeid},sensitiveword=${sensitiveword})}"
+                                           aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
                                         </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                    </li>
+                                </ul>
+                            </nav>
 
 
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                </div>
-                <!-- End of Page Wrapper -->
-
-                <!-- Scroll to Top Button-->
-                <a class="scroll-to-top rounded" href="#page-top">
-                    <i class="fas fa-angle-up"></i>
-                </a>
-
-                <!-- Logout Modal-->
-                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">确定要退出登录吗?</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">如果你想退出，下面选择“退出登录"</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
-                                <a class="btn btn-primary" href="/user/login">退出登录</a>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Bootstrap core JavaScript-->
-                <script src="/vendor/jquery/jquery.min.js"></script>
-                <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Core plugin JavaScript-->
-                <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+            </div>
+            <!-- End of Page Wrapper -->
 
-                <!-- Custom scripts for all pages-->
-                <script src="/js/sb-admin-2.min.js"></script>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
 
-                <!-- Page level plugins -->
-                <script src="/vendor/chart.js/Chart.min.js"></script>
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">确定要退出登录吗?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">如果你想退出，下面选择“退出登录"</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+                            <a class="btn btn-primary" href="/user/login">退出登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        >
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="/vendor/chart.js/Chart.min.js"></script>
 
 
 </body>

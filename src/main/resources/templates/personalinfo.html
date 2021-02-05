@@ -150,20 +150,20 @@
                                     <thead>
                                         <tr>
                                             <th>用户名</th>
-                                            <th>注册时间</th>
                                             <th>手机号</th>
                                             <th>邮箱</th>
                                             <th>已提交文档数</th>
+                                            <th>已申诉次数</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr th:each="User,userStat:${userList}">
-                                            <td th:text="${User.username}">Douglas McGee</td>
-                                            <td>2021-1-9</td>
-                                            <td th:text="${User.phone}">1101</td>
-                                            <td th:text="${User.email}">wzk@qq.com</td>
-                                            <td>1</td>
-                                        </tr>
+                                    <tr th:each="User,userStat:${userList}">
+                                        <td th:text="${User.username}">Douglas McGee</td>
+                                        <td th:text="${User.phone}">1101</td>
+                                        <td th:text="${User.email}">wzk@qq.com</td>
+                                        <td th:text="${userFileCount}">10086</td>
+                                        <td th:text="${userAppealCount}">10015</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>

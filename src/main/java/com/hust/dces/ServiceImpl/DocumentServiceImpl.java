@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class DocumentServiceImpl implements DocumentService {
+
     @Autowired
     private DocumentMapper documentMapper;
 
@@ -21,6 +22,16 @@ public class DocumentServiceImpl implements DocumentService {
     @Override
     public List<Document> findDocumentByUserId(Integer userId) {
         return documentMapper.findDocumentByUserId(userId);
+    }
+
+    @Override
+    public Document findDocumentByDocId(Integer docid) {
+        return documentMapper.findDocumentByDocId(docid);
+    }
+
+    @Override
+    public Integer deleteDocumentByDocid(Integer docid) {
+        return documentMapper.deleteDocumentByDocid(docid);
     }
 
 }

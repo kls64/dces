@@ -34,9 +34,19 @@ public class UserServicempl implements UserService {
         return userMapper.findUserByUserID(userID);
     }
 
-
     @Override
     public Integer updateUserByID(User user) {
         return userMapper.updateUserByID(user);
     }
+
+    @Override
+    public Integer getFileCountByUserID(Integer userID) {
+        return userMapper.getFileCountByUserID(userID);
+    }
+
+    @Override
+    public Integer getAppealCountByUserID(Integer userID) {
+        return userMapper.getAppealCountByUserID(userID);
+    }
+
 }

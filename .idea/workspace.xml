@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="1. 实现了发送邮箱验证码注册的功能，验证码1min过期。&#10;2. 改动了部分前端的内容，下一步做提交和分析文档模块。">
+    <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="1.改动了部分文件上传和分析的功能，文件上传保存到项目文件夹下，文件路径以绝对路径保存到数据库；&#10;2.改动了部分个人信息查看的功能，用户可以查看自己的申诉数目和提交文档数目。">
+      <change afterPath="$PROJECT_DIR$/static/files/1612361968647tmp.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/1612507430893下学期开课课表.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/1612507728338Mysql安装.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/AppealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/AppealController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/DocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/SensitiveWordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/SensitiveWordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Mapper/DocumentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Mapper/DocumentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Service/DocumentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Service/DocumentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/ServiceImpl/DocumentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/ServiceImpl/DocumentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/ServiceImpl/UserServicempl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/ServiceImpl/UserServicempl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Utils/EmailRegisterValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Utils/EmailRegisterValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Utils/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Utils/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/analyze.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/analyze.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guanggao.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guanggao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/indexadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/indexadmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginfailed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/personalinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/personalinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ssemanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ssemanage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sseresolv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sseresolv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/submitfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/submitfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/1612338307592" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +264,8 @@
       <workItem from="1611990672251" duration="11871000" />
       <workItem from="1612061243536" duration="22762000" />
       <workItem from="1612094067130" duration="7761000" />
-      <workItem from="1612147824333" duration="34668000" />
+      <workItem from="1612147824333" duration="53729000" />
+      <workItem from="1612421163067" duration="6411000" />
     </task>
     <task id="LOCAL-00001" summary="UserController">
       <created>1610435141246</created>
@@ -339,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612342743989</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fixup! 1. 实现了发送邮箱验证码注册的功能，验证码1min过期。 2. 改动了部分前端的内容，下一步做提交和分析文档模块。">
+      <created>1612343378978</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612343378978</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +417,9 @@
     <MESSAGE value="实现查看用户信息和修改，增加一个保存和获取当前用户工具类，用于以后代码改进" />
     <MESSAGE value="1.登陆界面实现保存密码功能，将用户名和密码保存到客户端cookie，下次登录可以记住用户名和密码直接登录；&#10;2.在登录界面将普通用户登录和管理员登录操作分开，用户即使输入正确的用户名和密码但用户类型选择不对依然登录失败；&#10;3.登录失败之后不再重定向到一个新界面，由后端返回一个带参数的url,前端js判别给出提示；&#10;4.在注册上使用js在前端判别输入的手机号和密码以及确认密码的合规性，之后再post到后端注册&#10;5.给邮箱发验证码的注册的功能尚在开发中" />
     <MESSAGE value="1. 实现了发送邮箱验证码注册的功能，验证码1min过期。&#10;2. 改动了部分前端的内容，下一步做提交和分析文档模块。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 实现了发送邮箱验证码注册的功能，验证码1min过期。&#10;2. 改动了部分前端的内容，下一步做提交和分析文档模块。" />
+    <MESSAGE value="fixup! 1. 实现了发送邮箱验证码注册的功能，验证码1min过期。 2. 改动了部分前端的内容，下一步做提交和分析文档模块。" />
+    <MESSAGE value="1.改动了部分文件上传和分析的功能，文件上传保存到项目文件夹下，文件路径以绝对路径保存到数据库；&#10;2.改动了部分个人信息查看的功能，用户可以查看自己的申诉数目和提交文档数目。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.改动了部分文件上传和分析的功能，文件上传保存到项目文件夹下，文件路径以绝对路径保存到数据库；&#10;2.改动了部分个人信息查看的功能，用户可以查看自己的申诉数目和提交文档数目。" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -401,13 +436,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="373" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611904585952" />
-    <state x="401" y="173" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612340895703">
+    <state x="401" y="173" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612344574581">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="401" y="173" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1612340895703" />
-    <state x="793" y="158" key="#com.intellij.ide.util.MemberChooser" timestamp="1611994270794">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="401" y="173" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1612344574581" />
+    <state x="705" y="140" key="#com.intellij.ide.util.MemberChooser" timestamp="1612363152427">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="705" y="140" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1612363152427" />
     <state x="793" y="158" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1611994270794" />
     <state x="499" y="189" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1611904625472">
       <screen x="0" y="0" width="1536" height="824" />
@@ -426,10 +462,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="923" y="338" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1611041099525" />
-    <state x="331" y="0" key="CommitChangelistDialog2" timestamp="1612343013642">
+    <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612406420689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="331" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1612343013642" />
+    <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612406420689" />
+    <state x="226" y="0" key="CommitChangelistDialog2" timestamp="1612518177492">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="226" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1612518177492" />
     <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1611632232339" />
     <state width="444" height="466" key="DebuggerActiveHint" timestamp="1611991751829">
       <screen x="0" y="0" width="1536" height="824" />
@@ -440,6 +480,10 @@
     </state>
     <state x="636" y="245" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1612148283799" />
     <state x="715" y="308" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611994940384" />
+    <state x="469" y="254" key="GitRewordDialog" timestamp="1612343363235">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="469" y="254" key="GitRewordDialog/0.0.1366.728@0.0.1366.728" timestamp="1612343363235" />
     <state x="644" y="306" width="272" height="211" key="Github.ShareDialog" timestamp="1610434860786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -448,45 +492,45 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="116" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610434870208" />
-    <state width="1323" height="137" key="GridCell.Tab.0.bottom" timestamp="1612342606992">
+    <state width="968" height="93" key="GridCell.Tab.0.bottom" timestamp="1612518231029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="137" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612342606992" />
+    <state width="968" height="93" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612518231029" />
     <state width="1493" height="252" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612006754512" />
-    <state width="1323" height="137" key="GridCell.Tab.0.center" timestamp="1612342606991">
+    <state width="968" height="93" key="GridCell.Tab.0.center" timestamp="1612518231029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="137" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612342606991" />
+    <state width="968" height="93" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612518231029" />
     <state width="1493" height="252" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612006754511" />
-    <state width="1323" height="137" key="GridCell.Tab.0.left" timestamp="1612342606991">
+    <state width="968" height="93" key="GridCell.Tab.0.left" timestamp="1612518231029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="137" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612342606991" />
+    <state width="968" height="93" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612518231029" />
     <state width="1493" height="252" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612006754511" />
-    <state width="1323" height="137" key="GridCell.Tab.0.right" timestamp="1612342606991">
+    <state width="968" height="93" key="GridCell.Tab.0.right" timestamp="1612518231029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="137" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612342606991" />
+    <state width="968" height="93" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612518231029" />
     <state width="1493" height="252" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612006754511" />
-    <state width="1323" height="137" key="GridCell.Tab.1.bottom" timestamp="1612342606992">
+    <state width="968" height="93" key="GridCell.Tab.1.bottom" timestamp="1612518231029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="137" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612342606992" />
+    <state width="968" height="93" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612518231029" />
     <state width="1493" height="252" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612006754512" />
-    <state width="1323" height="137" key="GridCell.Tab.1.center" timestamp="1612342606992">
+    <state width="968" height="93" key="GridCell.Tab.1.center" timestamp="1612518231029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="137" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1612342606992" />
+    <state width="968" height="93" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1612518231029" />
     <state width="1493" height="252" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612006754512" />
-    <state width="1323" height="137" key="GridCell.Tab.1.left" timestamp="1612342606992">
+    <state width="968" height="93" key="GridCell.Tab.1.left" timestamp="1612518231029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="137" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1612342606992" />
+    <state width="968" height="93" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1612518231029" />
     <state width="1493" height="252" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612006754512" />
-    <state width="1323" height="137" key="GridCell.Tab.1.right" timestamp="1612342606992">
+    <state width="968" height="93" key="GridCell.Tab.1.right" timestamp="1612518231029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="137" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1612342606992" />
+    <state width="968" height="93" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1612518231029" />
     <state width="1493" height="252" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612006754512" />
     <state width="1493" height="252" key="GridCell.Tab.2.bottom" timestamp="1612006754512">
       <screen x="0" y="0" width="1536" height="824" />
@@ -521,20 +565,20 @@
     </state>
     <state x="182" y="0" width="1038" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1612148303340" />
     <state x="279" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1611990848925" />
-    <state x="348" y="141" key="Vcs.Push.Dialog.v2" timestamp="1612342765774">
+    <state x="348" y="141" key="Vcs.Push.Dialog.v2" timestamp="1612343382824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="348" y="141" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612342765774" />
+    <state x="348" y="141" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612343382824" />
     <state x="391" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611632238882" />
-    <state x="350" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1612147825023">
+    <state x="350" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1612421163548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1612147825023" />
+    <state x="350" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1612421163548" />
     <state x="394" y="218" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1611990673518" />
-    <state x="500" y="292" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612145543033">
+    <state x="500" y="292" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612508002343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="292" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1612145543033" />
+    <state x="500" y="292" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1612508002343" />
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1611215546543" />
     <state x="337" y="46" key="new project wizard" timestamp="1611041628995">
       <screen x="0" y="0" width="1536" height="824" />

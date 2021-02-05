@@ -124,7 +124,13 @@ public class UserController {
         User user = (User) request.getSession().getAttribute("currentUser");
         Integer userID = user.getUserid();
         List<User> userList = userService.checkUserByUserID(userID);
-        model.addAttribute("userList",userList);
+        model.addAttribute("userList", userList);
+        // 放上此用户的提交文档次数
+        Integer userFileCount = userService.getFileCountByUserID(userID);
+        model.addAttribute("userFileCount", userFileCount);
+        // 放上此用户的申诉次数
+        Integer userAppealCount = userService.getAppealCountByUserID(userID);
+        model.addAttribute("userAppealCount", userAppealCount);
         return "personalinfo"; // personalinfo.html
     }
 
@@ -132,6 +138,7 @@ public class UserController {
     public String adminsmanage(){
 
         return "ssemanage"; // ssemanage.html
+
     }
 
     @GetMapping("/update/{id}")
@@ -145,12 +152,6 @@ public class UserController {
     public String userupdate(User user){
         userService.updateUserByID(user);
         return "redirect:/user/login";
-    }
-
-    @GetMapping("/loginfailed")
-    public String userlf(){
-
-        return "loginfailed"; // loginfailed.html
     }
 
 

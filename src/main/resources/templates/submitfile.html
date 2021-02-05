@@ -81,7 +81,7 @@
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="/user/review">
+            <a class="nav-link" href="/apl/review">
                 <i class="fas fa-fw fa-table"></i>
                 <span>查看申诉</span>
             </a>
@@ -137,7 +137,7 @@
             </nav>
             <!-- End of Topbar -->
 
-            <form class="form-horizontal" action="/document/analyze" method="Post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="/document/upload" method="Post" enctype="multipart/form-data">
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -159,15 +159,14 @@
                                     <label>你的文档是关于哪个方面的?</label>
                                 </div>
                                 <div class="col-lg-4">
-                                    <select class="form-control">
-                                        <option>类型</option>
-                                        <option>教育</option>
-                                        <option>科技</option>
-                                        <option>文化</option>
-                                        <option>政治</option>
-                                        <option>经济</option>
-                                        <option>生活</option>
-                                        <option>其他</option>
+                                    <select class="form-control" name="fileType">
+                                        <option>*.doc</option>
+                                        <option>*.docx</option>
+                                        <option>*.pdf</option>
+                                        <option>*.txt</option>
+                                        <option>*.jpg</option>
+                                        <option>*.jpeg</option>
+                                        <option>*.png</option>
                                     </select>
                                 </div>
                             </nav>

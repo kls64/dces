@@ -32,14 +32,16 @@ public class AppealController {
 
     @PostMapping("/appeal")
     public String userappeal(HttpServletRequest request, Appealdoc appealdoc){
-        User user = (User) request.getSession().getAttribute("currentUser"); // 获取当前用户
-        Document document = (Document) request.getSession().getAttribute("currentDocument"); // 获取当前文档，但docid无法显示
+        // 获取当前用户
+        User user = (User) request.getSession().getAttribute("currentUser");
+        // 获取当前文档，但docid无法显示
+        Document document = (Document) request.getSession().getAttribute("currentDocument");
         // Document document = appealService.discoverDocumentByUserId(user.getUserid());
         // userid和文档是一对多的关系，这里返回了不止一个文档
         appealdoc.setUserid(user.getUserid()); // 设置userid
         appealdoc.setDocname(document.getDocname()); // 设置docname
-        Date date=new Date();//获取一个java.util包下的Date对象
-        Timestamp time=new Timestamp(date.getTime());//然后将时间转换成数据库类型的datetime类型
+        Date date = new Date();//获取一个java.util包下的Date对象
+        Timestamp time = new Timestamp(date.getTime());//然后将时间转换成数据库类型的datetime类型
         appealdoc.setAppealtime(time);
         appealService.addAppeal(appealdoc);
         // 保存appeal文档到session中
