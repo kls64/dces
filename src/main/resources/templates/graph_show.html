@@ -1,0 +1,52 @@
+    
+    <html>
+    <head>
+      <script type="text/javascript" src="/VIS/dist/vis.js"></script>
+      <link href="/VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 72, 'label': '雷某'}, {'group': 'Event', 'id': 19, 'label': '关键词'}, {'group': 'Event', 'id': 56, 'label': '警方'}, {'group': 'Event', 'id': 143, 'label': '雷洋'}, {'group': 'Event', 'id': 58, 'label': '足疗店'}, {'group': 'Event', 'id': 54, 'label': '民警'}, {'group': 'Event', 'id': 64, 'label': '死亡'}, {'group': 'Event', 'id': 62, 'label': '嫖娼'}, {'group': 'Event', 'id': 99, 'label': '昌平'}, {'group': 'Event', 'id': 16, 'label': '视频'}, {'group': 'Event', 'id': 18, 'label': '涉嫌'}, {'group': 'Event', 'id': 21, 'label': '针对线索'}, {'group': 'Event', 'id': 23, 'label': '存在问题'}, {'group': 'Event', 'id': 25, 'label': '发现离开'}, {'group': 'Event', 'id': 27, 'label': '离开'}, {'group': 'Event', 'id': 29, 'label': '试图逃跑'}, {'group': 'Event', 'id': 31, 'label': '挣脱'}, {'group': 'Event', 'id': 33, 'label': '反抗'}, {'group': 'Event', 'id': 35, 'label': '送医院'}, {'group': 'Event', 'id': 37, 'label': '抢救'}, {'group': 'Event', 'id': 39, 'label': '抓获'}, {'group': 'Event', 'id': 41, 'label': '进行活动'}, {'group': 'Event', 'id': 43, 'label': '身亡'}, {'group': 'Event', 'id': 45, 'label': '通报'}, {'group': 'Event', 'id': 47, 'label': '不适'}, {'group': 'Event', 'id': 49, 'label': '出门'}, {'group': 'Event', 'id': 51, 'label': '失联'}, {'group': 'Event', 'id': 71, 'label': '高频词'}, {'group': 'Event', 'id': 66, 'label': '5月'}, {'group': 'Event', 'id': 68, 'label': '7日'}, {'group': 'Event', 'id': 93, 'label': '人物'}, {'group': 'Event', 'id': 79, 'label': '地名'}, {'group': 'Event', 'id': 98, 'label': '霍营'}, {'group': 'Event', 'id': 80, 'label': '亮明'}, {'group': 'Event', 'id': 82, 'label': '昌平区中西医'}, {'group': 'Event', 'id': 95, 'label': '机构'}, {'group': 'Event', 'id': 139, 'label': '朱某'}, {'group': 'Event', 'id': 133, 'label': '俞某'}, {'group': 'Event', 'id': 138, 'label': '才某'}, {'group': 'Event', 'id': 135, 'label': '刘某'}, {'group': 'Event', 'id': 137, 'label': '张某'}, {'group': 'Event', 'id': 142, 'label': '中国人民大学环境学院'}];
+      var edges = [{'from': 72, 'label': '', 'to': 19}, {'from': 56, 'label': '', 'to': 19}, {'from': 143, 'label': '', 'to': 19}, {'from': 58, 'label': '', 'to': 19}, {'from': 54, 'label': '', 'to': 19}, {'from': 64, 'label': '', 'to': 19}, {'from': 62, 'label': '', 'to': 19}, {'from': 99, 'label': '', 'to': 19}, {'from': 16, 'label': '', 'to': 19}, {'from': 18, 'label': '', 'to': 19}, {'from': 56, 'label': '', 'to': 21}, {'from': 58, 'label': '', 'to': 23}, {'from': 54, 'label': '', 'to': 25}, {'from': 72, 'label': '', 'to': 27}, {'from': 72, 'label': '', 'to': 29}, {'from': 72, 'label': '', 'to': 31}, {'from': 72, 'label': '', 'to': 33}, {'from': 54, 'label': '', 'to': 35}, {'from': 72, 'label': '', 'to': 37}, {'from': 54, 'label': '', 'to': 39}, {'from': 72, 'label': '', 'to': 41}, {'from': 143, 'label': '', 'to': 43}, {'from': 56, 'label': '', 'to': 45}, {'from': 72, 'label': '', 'to': 47}, {'from': 143, 'label': '', 'to': 49}, {'from': 143, 'label': '', 'to': 51}, {'from': 72, 'label': '', 'to': 71}, {'from': 54, 'label': '', 'to': 71}, {'from': 56, 'label': '', 'to': 71}, {'from': 58, 'label': '', 'to': 71}, {'from': 143, 'label': '', 'to': 71}, {'from': 62, 'label': '', 'to': 71}, {'from': 64, 'label': '', 'to': 71}, {'from': 66, 'label': '', 'to': 71}, {'from': 68, 'label': '', 'to': 71}, {'from': 99, 'label': '', 'to': 71}, {'from': 72, 'label': '', 'to': 93}, {'from': 143, 'label': '', 'to': 93}, {'from': 99, 'label': '', 'to': 79}, {'from': 98, 'label': '', 'to': 79}, {'from': 80, 'label': '', 'to': 93}, {'from': 82, 'label': '', 'to': 95}, {'from': 139, 'label': '', 'to': 93}, {'from': 133, 'label': '', 'to': 93}, {'from': 138, 'label': '', 'to': 93}, {'from': 135, 'label': '', 'to': 93}, {'from': 137, 'label': '', 'to': 93}, {'from': 142, 'label': '', 'to': 95}, {'from': 99, 'label': '', 'to': 98}, {'from': 98, 'label': '', 'to': 99}, {'from': 133, 'label': '', 'to': 135}, {'from': 133, 'label': '', 'to': 137}, {'from': 133, 'label': '', 'to': 139}, {'from': 133, 'label': '', 'to': 138}, {'from': 135, 'label': '', 'to': 133}, {'from': 135, 'label': '', 'to': 137}, {'from': 135, 'label': '', 'to': 139}, {'from': 135, 'label': '', 'to': 138}, {'from': 137, 'label': '', 'to': 133}, {'from': 137, 'label': '', 'to': 135}, {'from': 137, 'label': '', 'to': 139}, {'from': 137, 'label': '', 'to': 138}, {'from': 139, 'label': '', 'to': 133}, {'from': 139, 'label': '', 'to': 135}, {'from': 139, 'label': '', 'to': 137}, {'from': 139, 'label': '', 'to': 138}, {'from': 138, 'label': '', 'to': 133}, {'from': 138, 'label': '', 'to': 135}, {'from': 138, 'label': '', 'to': 137}, {'from': 138, 'label': '', 'to': 139}, {'from': 143, 'label': '', 'to': 142}, {'from': 142, 'label': '', 'to': 143}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'circle',
+              size: 15,
+              font: {
+                  size: 15
+              }
+          },
+          edges: {
+              font: {
+                  size: 10,
+                  align: 'center'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 1.2}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    
