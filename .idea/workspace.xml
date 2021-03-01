@@ -2,65 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86e339ec-57be-4afe-8327-fd4e3235a2c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Utils/JavaRunPython.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/VIS/dist/vis.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/VIS/dist/vis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/VIS/dist/vis.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/VIS/dist/vis.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/VIS/dist/vis.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/chord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/eventRiver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/force.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/funnel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/gauge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/heatmap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/k.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/line.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/pie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/radar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/scatter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/treemap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/venn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/chart/wordCloud.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/echarts-all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/dist/echarts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/echarts-optimize-conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/chord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/eventRiver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/force.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/funnel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/gauge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/heatmap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/k.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/line.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/pie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/radar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/scatter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/treemap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/venn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/chart/wordCloud.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/echarts-all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/build/source/echarts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/graph_show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dces.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dces.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hust/dces/Controller/DocumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/analyze.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/analyze.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/appeal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/appeal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/appealresolv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/appealresolv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/indexadmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/indexadmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/personalinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/personalinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ssemanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ssemanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sseresolv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sseresolv.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +201,7 @@
       <workItem from="1614478952861" duration="6744000" />
       <workItem from="1614490078011" duration="2857000" />
       <workItem from="1614558962004" duration="7221000" />
-      <workItem from="1614578694182" duration="1337000" />
+      <workItem from="1614578694182" duration="2024000" />
     </task>
     <task id="LOCAL-00001" summary="UserController">
       <created>1610435141246</created>
@@ -303,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611290776008</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="实现文档关系图谱的展示">
+      <created>1614580418727</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614580418727</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +262,8 @@
     <MESSAGE value="UserController" />
     <MESSAGE value="将controller层分了一下,整合了注册功能,文档上传1.0" />
     <MESSAGE value="用户查看文件/登录信息回显" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户查看文件/登录信息回显" />
+    <MESSAGE value="实现文档关系图谱的展示" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现文档关系图谱的展示" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Inspections" timestamp="1614310027072">
@@ -348,10 +298,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="68" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1536.824@0.0.1536.824" timestamp="1614309833925" />
-    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1612061815937">
+    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1614580412439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612061815937" />
+    <state x="372" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614580412439" />
     <state x="23" y="49" width="1254" height="682" key="DiffContextDialog" timestamp="1611146028562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -432,10 +382,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="242" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614310967259" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1611290781997">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1614580423646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611290781997" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614580423646" />
     <state x="565" y="190" key="chooseDestDirectoryDialog" timestamp="1611107843395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
