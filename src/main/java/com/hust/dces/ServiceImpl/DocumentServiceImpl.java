@@ -34,4 +34,9 @@ public class DocumentServiceImpl implements DocumentService {
         return documentMapper.deleteDocumentByDocid(docid);
     }
 
+    @Override
+    public Document findDocumentByDocName(String docName) {
+        return documentMapper.findDocumentByDocName(docName);
+    }
+
 }

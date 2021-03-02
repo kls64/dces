@@ -27,4 +27,7 @@ public interface SensitiveWordMapper {
     @Select("select * from sensitivewordstype")
     List<SensitiveWordsType>findAllType();
 
+    @Select("select sensitiveword from sensitivewordslib")
+    List<String>findAllSensitiveWordsName();
+
 }

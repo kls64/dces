@@ -2,9 +2,8 @@ package com.hust.dces.Utils;
 
 import org.springframework.util.ResourceUtils;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
+import java.util.List;
 
 public class FileUtil {
 
@@ -41,4 +40,38 @@ public class FileUtil {
             file.delete();
         }
     }
+
+    public static void storeAsTxT(String filePath,List<String> list){
+        File outFile = new File(filePath);
+        Writer out;
+        try {
+            out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile, true), "utf-8"), 10240);
+            for (int i = 0; i < list.size(); i++) {
+                out.write(list.get(i));
+                out.write("\r\n");
+            }
+            out.flush();
+            out.close();
+        } catch (Exception e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+    }
+
+    public static String readTxt(String docPath){
+        String result = "";
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(docPath));//构造一个BufferedReader类来读取文件
+            String s = null;
+            while ((s = br.readLine()) != null) {//使用readLine方法，一次读一行
+                result = result + "\n" + s;
+            }
+            br.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+
 }

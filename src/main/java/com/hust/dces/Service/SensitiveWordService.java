@@ -19,4 +19,6 @@ public interface SensitiveWordService {
 
     List<SensitiveWordsType> findAllType();
 
+    List<String>findAllSensitiveWordsName();
+
 }

@@ -54,4 +54,9 @@ public class SensitiveWordServiceImpl implements SensitiveWordService {
         return sensitiveWordMapper.findAllType();
     }
 
+    @Override
+    public List<String> findAllSensitiveWordsName() {
+        return sensitiveWordMapper.findAllSensitiveWordsName();
+    }
+
 }

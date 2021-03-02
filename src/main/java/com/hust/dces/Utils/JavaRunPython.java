@@ -5,11 +5,11 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 
 public class JavaRunPython {
-    public static String textGraph() {
+    public static String textGraph(Integer docId) {
         String result = "";
         try {
             // 输入指令执行python脚本
-            Process process = Runtime.getRuntime().exec("python C:\\Users\\kunkun\\Desktop\\TextGrapher-master\\test.py");
+            Process process = Runtime.getRuntime().exec("python C:\\Users\\kls\\Desktop\\TextGrapher-master\\test.py"+" "+docId);
             // 获取返回值的方式是需要用python打印输出，然后java去获取命令行的输出，再用java返回
             InputStreamReader ir = new InputStreamReader(process.getInputStream());
             LineNumberReader input = new LineNumberReader(ir);

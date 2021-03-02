@@ -14,4 +14,6 @@ public interface DocumentService {
 
     Integer deleteDocumentByDocid(Integer docid);
 
+    Document findDocumentByDocName(String docName);
+
 }

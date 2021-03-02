@@ -20,6 +20,9 @@ public interface DocumentMapper {
     @Select("select * from document where docid = #{docid}")
     Document findDocumentByDocId(Integer docid);
 
+    @Select("select * from document where docname = #{docname}")
+    Document findDocumentByDocName(String docName);
+
     @Delete("delete from document where docid = #{docid}")
     Integer deleteDocumentByDocid(Integer docid);
 
