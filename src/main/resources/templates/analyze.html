@@ -198,7 +198,8 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <a href="/apl/appeal" class="btn btn-primary">
+<!--                            <a href="/apl/appeal"+appealDocId class="btn btn-primary">-->
+                                <a th:href="@{'/apl/appeal/'+${appealDocId}}" class="btn btn-primary">
                                 申诉
                             </a>
                         </div>

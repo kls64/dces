@@ -4,13 +4,11 @@ import com.hust.dces.Entity.Appealdoc;
 import com.hust.dces.Entity.Document;
 import com.hust.dces.Entity.User;
 import com.hust.dces.Service.AppealService;
+import com.hust.dces.Service.DocumentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
@@ -23,22 +21,26 @@ public class AppealController {
 
     @Autowired
     private AppealService appealService;
+    @Autowired
+    private DocumentService documentService;
 
-    @GetMapping("/appeal")
-    public String userappeal(){
-
+    @GetMapping("/appeal/{appealDocId}")
+    public String userappeal(Model model,@PathVariable("appealDocId") Integer appealDocId){
+        model.addAttribute("appealDocId",appealDocId);
         return "appeal"; // appeal.html
     }
 
     @PostMapping("/appeal")
-    public String userappeal(HttpServletRequest request, Appealdoc appealdoc){
+    public String userappeal(HttpServletRequest request, Appealdoc appealdoc,Integer appealDocId){
         // 获取当前用户
+//        Integer appealDocId = (Integer) request.getAttribute("appealDocId");
         User user = (User) request.getSession().getAttribute("currentUser");
         // 获取当前文档，但docid无法显示
-        Document document = (Document) request.getSession().getAttribute("currentDocument");
-        // Document document = appealService.discoverDocumentByUserId(user.getUserid());
-        // userid和文档是一对多的关系，这里返回了不止一个文档
+//        Document document = (Document) request.getSession().getAttribute("currentDocument");
+//        // Document document = appealService.discoverDocumentByUserId(user.getUserid());
+//        // userid和文档是一对多的关系，这里返回了不止一个文档
         appealdoc.setUserid(user.getUserid()); // 设置userid
+        Document document = documentService.findDocumentByDocId(appealDocId);
         appealdoc.setDocname(document.getDocname()); // 设置docname
         Date date = new Date();//获取一个java.util包下的Date对象
         Timestamp time = new Timestamp(date.getTime());//然后将时间转换成数据库类型的datetime类型

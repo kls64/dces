@@ -92,6 +92,7 @@ public class DocumentController {
         Set<String> set = BadWordUtil2.getBadWord(txt, 2);
         System.out.println("语句中包含敏感词的个数为：" + set.size() + "。包含：" + set);
         model.addAttribute("sens_words",set);
+        model.addAttribute("appealDocId",docid);
         //
         return "analyze"; // analyze.html
     }
