@@ -113,7 +113,10 @@ public class UserController {
     }
 
     @GetMapping("/indexadmin")
-    public String adminindex(){
+    public String adminindex(Model model){
+        List<Document>subDoc = userService.findDocByUser();
+        //System.out.println(subDoc.get(0).isStatus());
+        model.addAttribute("subdoc",subDoc);
 
         return "indexadmin"; // indexadmin.html
     }

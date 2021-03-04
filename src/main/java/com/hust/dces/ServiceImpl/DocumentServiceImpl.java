@@ -43,4 +43,9 @@ public class DocumentServiceImpl implements DocumentService {
     public Integer findDocIdByDocpath(String docpath) {
         return documentMapper.findDocIdByDocpath(docpath);
     }
+
+    @Override
+    public Integer updateStatusById(Integer docId,boolean status){
+        return documentMapper.updateStatusById(docId,status);
+    }
 }

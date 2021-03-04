@@ -143,13 +143,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>李华</td>
-                                            <td>《我和我的祖国》</td>
-                                            <td>2020-1-9</td>
-                                            <td>政治</td>
-                                            <td>否</td>
-                                        </tr>
+                                    <tbody>
+                                    <tr th:each="Document:${subdoc}">
+                                        <td th:text="${Document.username}">李华</td>
+                                        <td th:text="${Document.docname}">《我和我的祖国》</td>
+                                        <td th:text="${#dates.format(Document.uploadtime,'yyyy/MM/dd')}">2020-1-9</td>
+                                        <td th:text="${Document.doctype}">政治</td>
+                                        <td th:text="${Document.status}==false? '否':'是'">否</td>
+                                    </tr>
+                                    </tbody>
                                     </tbody>
                                 </table>
                             </div>

@@ -1,5 +1,6 @@
 package com.hust.dces.Service;
 
+import com.hust.dces.Entity.Document;
 import com.hust.dces.Entity.User;
 
 import java.util.List;
@@ -19,5 +20,7 @@ public interface UserService {
     Integer getFileCountByUserID(Integer userID);
 
     Integer getAppealCountByUserID(Integer userID);
+
+    List<Document>findDocByUser();
 
 }

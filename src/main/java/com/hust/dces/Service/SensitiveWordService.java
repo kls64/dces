@@ -21,4 +21,5 @@ public interface SensitiveWordService {
 
     List<String>findAllSensitiveWordsName();
 
+
 }

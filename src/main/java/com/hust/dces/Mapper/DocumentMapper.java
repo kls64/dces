@@ -1,10 +1,7 @@
 package com.hust.dces.Mapper;
 
 import com.hust.dces.Entity.Document;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -13,6 +10,9 @@ public interface DocumentMapper {
 
     @Insert("insert into document(docname,userid,doctype,docpath,uploadtime)values(#{docname},#{userid},#{doctype},#{docpath},#{uploadtime})")
     Integer addDocument(Document document);
+
+    @Update("update document set status =#{status} where docid=#{docid}")
+    Integer updateStatusById(Integer docid,boolean status);
 
     @Select("select * from document where userid = #{userid}")
     List<Document> findDocumentByUserId(Integer userId);

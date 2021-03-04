@@ -1,5 +1,6 @@
 package com.hust.dces.ServiceImpl;
 
+import com.hust.dces.Entity.Document;
 import com.hust.dces.Entity.User;
 import com.hust.dces.Mapper.UserMapper;
 import com.hust.dces.Service.UserService;
@@ -47,6 +48,11 @@ public class UserServicempl implements UserService {
     @Override
     public Integer getAppealCountByUserID(Integer userID) {
         return userMapper.getAppealCountByUserID(userID);
+    }
+
+    @Override
+    public List<Document> findDocByUser() {
+        return userMapper.findDocByUser();
     }
 
 }

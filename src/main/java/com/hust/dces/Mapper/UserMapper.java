@@ -1,5 +1,6 @@
 package com.hust.dces.Mapper;
 
+import com.hust.dces.Entity.Document;
 import com.hust.dces.Entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -32,5 +33,8 @@ public interface UserMapper {
 
     @Select("select count(*) from appealdoc where userid = #{userID}")
     Integer getAppealCountByUserID(Integer userID);
+
+    @Select("select user.username, document.docname, document.uploadtime, document.doctype, document.status from user join document on user.userid = document.userid")
+    List<Document>findDocByUser();
 
 }

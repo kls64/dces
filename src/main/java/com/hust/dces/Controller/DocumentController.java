@@ -148,6 +148,9 @@ public class DocumentController {
         Set<String> s = BadWordUtil2.words;
         Map<String,String> map = BadWordUtil2.wordMap;
         Set<String> set = BadWordUtil2.getBadWord(txt, 2);
+        if (set.size() > 0) {
+            documentService.updateStatusById(docid,true);
+        }
         System.out.println("语句中包含敏感词的个数为：" + set.size() + "。包含：" + set);
 
         model.addAttribute("sens_words",set);

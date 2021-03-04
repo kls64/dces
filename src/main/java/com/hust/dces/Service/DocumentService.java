@@ -18,4 +18,6 @@ public interface DocumentService {
 
     Integer findDocIdByDocpath(String docpath);
 
+    Integer updateStatusById(Integer docId,boolean status);
+
 }
