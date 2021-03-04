@@ -39,4 +39,8 @@ public class DocumentServiceImpl implements DocumentService {
         return documentMapper.findDocumentByDocName(docName);
     }
 
+    @Override
+    public Integer findDocIdByDocpath(String docpath) {
+        return documentMapper.findDocIdByDocpath(docpath);
+    }
 }

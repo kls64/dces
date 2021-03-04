@@ -16,4 +16,6 @@ public interface DocumentService {
 
     Document findDocumentByDocName(String docName);
 
+    Integer findDocIdByDocpath(String docpath);
+
 }

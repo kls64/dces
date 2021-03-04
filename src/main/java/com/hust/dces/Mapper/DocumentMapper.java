@@ -26,4 +26,7 @@ public interface DocumentMapper {
     @Delete("delete from document where docid = #{docid}")
     Integer deleteDocumentByDocid(Integer docid);
 
+    @Select("select docid from document where docpath = #{docpath}")
+    Integer findDocIdByDocpath(String docpath);
+
 }
